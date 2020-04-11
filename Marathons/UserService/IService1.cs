@@ -12,34 +12,97 @@ namespace UserService
     public interface IService1
     {
         [OperationContract]
-        string GetData(int value);
+        User GetUser(string email, string password);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        void EditUser(User user);
 
-        // TODO: Добавьте здесь операции служб
     }
 
-    // Используйте контракт данных, как показано на следующем примере, чтобы добавить сложные типы к сервисным операциям.
-    // В проект можно добавлять XSD-файлы. После построения проекта вы можете напрямую использовать в нем определенные типы данных с пространством имен "UserService.ContractType".
     [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
+    public class User {
+        [DataMember]
+        public string email;
 
         [DataMember]
-        public bool BoolValue
+        public string password;
+
+        [DataMember]
+        public string firstName;
+
+        [DataMember]
+        public string lastName;
+
+        [DataMember]
+        public Role role;
+
+        [DataMember]
+        public RunnerData runnerData = null;
+
+
+        public User(string email, string password, 
+            string firstName, string lastName, Role role)
         {
-            get { return boolValue; }
-            set { boolValue = value; }
+            this.email = email;
+            this.password = password;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.role = role;
+        }
+    }
+
+    [DataContract]
+    public class RunnerData
+    {
+        [DataMember]
+        public string gender;
+
+        [DataMember]
+        public string birthday;
+
+        [DataMember]
+        public string countryCode;
+
+        [DataMember]
+        public string country;
+
+        public RunnerData(string gender, string birthday, string countryCode, string country)
+        {
+            this.gender = gender;
+            this.birthday = birthday;
+            this.countryCode = countryCode;
+            this.country = country;
+        }
+    }
+
+    [DataContract]
+    public class Role
+    {
+        [DataMember]
+        public string roleId;
+
+        [DataMember]
+        public string name;
+
+        public Role(string id)
+        {
+            roleId = id;
+            name = getRoleName(id);
         }
 
-        [DataMember]
-        public string StringValue
+        private string getRoleName(string id)
         {
-            get { return stringValue; }
-            set { stringValue = value; }
+            switch (id)
+            {
+                case "A":
+                    return "Administrator";
+                case "C":
+                    return "Coordinator";
+                case "R":
+                    return "Runner";
+                default:
+                    return "";
+            }
         }
     }
 }
