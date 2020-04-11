@@ -30,5 +30,11 @@ namespace UserService
             return $"UPDATE [Runner] SET Gender = '{runner.gender}', DateOfBirth = '{Convert.ToDateTime(runner.birthday)}', CountryCode = '{runner.countryCode}' " +
                 $"WHERE Email = '{email}'";
         }
+
+        public static string Sponsorship(int runnerId) {
+            return $"SELECT Sponsorship.SponsorshipId, Sponsorship.SponsorName, Sponsorship.RegistrationId, Sponsorship.Amount, Runner.RunnerId " +
+                $"FROM (Sponsorship INNER JOIN Registration ON Sponsorship.RegistrationId = Registration.RegistrationId INNER JOIN Runner ON Runner.RunnerId = Registration.RunnerId ) " +
+                $"WHERE Runner.RunnerId = {runnerId}";
+        }
     }
 }
