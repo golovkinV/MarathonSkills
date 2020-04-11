@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Marathons
+namespace UserService
 {
-    public class Class1
+    class UserRequest
     {
     }
 }
