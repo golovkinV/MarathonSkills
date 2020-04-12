@@ -31,12 +31,6 @@ namespace UserService
                 $"WHERE Email = '{email}'";
         }
 
-        public static string Sponsorship(int runnerId) {
-            return $"SELECT Sponsorship.SponsorshipId, Sponsorship.SponsorName, Sponsorship.RegistrationId, Sponsorship.Amount, Runner.RunnerId " +
-                $"FROM (Sponsorship INNER JOIN Registration ON Sponsorship.RegistrationId = Registration.RegistrationId INNER JOIN Runner ON Runner.RunnerId = Registration.RunnerId ) " +
-                $"WHERE Runner.RunnerId = {runnerId}";
-        }
-
         public static string RegisterUser(string email, string password, string firstName, string lastName) {
             return $"INSERT INTO [User] (Email, Password, FirstName, LastName, RoleId) " +
                 $"VALUES('{email}', '{password}', '{firstName}', '{lastName}', 'R')";
