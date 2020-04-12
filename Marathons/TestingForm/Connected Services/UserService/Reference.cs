@@ -296,17 +296,23 @@ namespace TestingForm.UserService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="UserService.IService1")]
     public interface IService1 {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetUser", ReplyAction="http://tempuri.org/IService1/GetUserResponse")]
-        TestingForm.UserService.User GetUser(string email, string password);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
+        TestingForm.UserService.User Login(string email, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetUser", ReplyAction="http://tempuri.org/IService1/GetUserResponse")]
-        System.Threading.Tasks.Task<TestingForm.UserService.User> GetUserAsync(string email, string password);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
+        System.Threading.Tasks.Task<TestingForm.UserService.User> LoginAsync(string email, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditUser", ReplyAction="http://tempuri.org/IService1/EditUserResponse")]
         void EditUser(TestingForm.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditUser", ReplyAction="http://tempuri.org/IService1/EditUserResponse")]
         System.Threading.Tasks.Task EditUserAsync(TestingForm.UserService.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/RegisterAsRunner", ReplyAction="http://tempuri.org/IService1/RegisterAsRunnerResponse")]
+        void RegisterAsRunner(TestingForm.UserService.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/RegisterAsRunner", ReplyAction="http://tempuri.org/IService1/RegisterAsRunnerResponse")]
+        System.Threading.Tasks.Task RegisterAsRunnerAsync(TestingForm.UserService.User user);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -336,12 +342,12 @@ namespace TestingForm.UserService {
                 base(binding, remoteAddress) {
         }
         
-        public TestingForm.UserService.User GetUser(string email, string password) {
-            return base.Channel.GetUser(email, password);
+        public TestingForm.UserService.User Login(string email, string password) {
+            return base.Channel.Login(email, password);
         }
         
-        public System.Threading.Tasks.Task<TestingForm.UserService.User> GetUserAsync(string email, string password) {
-            return base.Channel.GetUserAsync(email, password);
+        public System.Threading.Tasks.Task<TestingForm.UserService.User> LoginAsync(string email, string password) {
+            return base.Channel.LoginAsync(email, password);
         }
         
         public void EditUser(TestingForm.UserService.User user) {
@@ -350,6 +356,14 @@ namespace TestingForm.UserService {
         
         public System.Threading.Tasks.Task EditUserAsync(TestingForm.UserService.User user) {
             return base.Channel.EditUserAsync(user);
+        }
+        
+        public void RegisterAsRunner(TestingForm.UserService.User user) {
+            base.Channel.RegisterAsRunner(user);
+        }
+        
+        public System.Threading.Tasks.Task RegisterAsRunnerAsync(TestingForm.UserService.User user) {
+            return base.Channel.RegisterAsRunnerAsync(user);
         }
     }
 }

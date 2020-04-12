@@ -12,11 +12,14 @@ namespace UserService
     public interface IService1
     {
         [OperationContract]
-        User GetUser(string email, string password);
+        User Login(string email, string password);
 
         [OperationContract]
         void EditUser(User user);
 
+        [OperationContract]
+        void RegisterAsRunner(string email, string password, string firstName, string lastName, 
+            string gender, string dateOfBirth, string countryCode);
     }
 
     [DataContract]

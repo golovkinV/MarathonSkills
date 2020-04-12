@@ -14,7 +14,7 @@ namespace UserService
     public class Service1 : IService1
     {
 
-        public User GetUser(string email, string password)
+        public User Login(string email, string password)
         {
             var userReader = Reader.GetTableReader(UserRequest.User(email, password));
 
@@ -46,7 +46,7 @@ namespace UserService
         }
 
         public void EditUser(User user) {
-            using (SqlConnection con = new SqlConnection(Configuration.localServer))
+            using (SqlConnection con = new SqlConnection(Configuration.someeServer))
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
@@ -56,12 +56,30 @@ namespace UserService
 
                 if (user.runnerData != null)
                 {
-                    SqlCommand cmd_runner = con.CreateCommand();
-                    cmd_runner.CommandType = CommandType.Text;
+                    SqlCommand cmdRunner = con.CreateCommand();
+                    cmdRunner.CommandType = CommandType.Text;
                     var runner = user.runnerData;
-                    cmd_runner.CommandText = UserRequest.UpdateRunnerData(runner, user.email);
-                    cmd_runner.ExecuteNonQuery();
+                    cmdRunner.CommandText = UserRequest.UpdateRunnerData(runner, user.email);
+                    cmdRunner.ExecuteNonQuery();
                 }
+            }
+        }
+
+        public void RegisterAsRunner(string email, string password, string firstName, string lastName,
+            string gender, string dateOfBirth, string countryCode)
+        {
+            using (SqlConnection con = new SqlConnection(Configuration.someeServer))
+            {
+                con.Open();
+                var cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = UserRequest.RegisterUser(email, password, firstName, lastName);
+                cmd.ExecuteNonQuery();
+
+                var cmdRunner = con.CreateCommand();
+                cmdRunner.CommandType = CommandType.Text;
+                cmdRunner.CommandText = UserRequest.RegisterRunner(email, gender, dateOfBirth, countryCode);
+                cmd.ExecuteNonQuery();
             }
         }
     }

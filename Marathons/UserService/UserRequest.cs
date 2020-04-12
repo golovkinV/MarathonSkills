@@ -36,5 +36,15 @@ namespace UserService
                 $"FROM (Sponsorship INNER JOIN Registration ON Sponsorship.RegistrationId = Registration.RegistrationId INNER JOIN Runner ON Runner.RunnerId = Registration.RunnerId ) " +
                 $"WHERE Runner.RunnerId = {runnerId}";
         }
+
+        public static string RegisterUser(string email, string password, string firstName, string lastName) {
+            return $"INSERT INTO [User] (Email, Password, FirstName, LastName, RoleId) " +
+                $"VALUES('{email}', '{password}', '{firstName}', '{lastName}', 'R')";
+        }
+
+        public static string RegisterRunner(string email, string gender, string dateOfBirth, string countryCode) {
+            return $"INSERT INTO [Runner] (Email, Gender, DateOfBirth, CountryCode) " +
+                $"VALUES('{email}', '{gender}', '{Convert.ToDateTime(dateOfBirth)}', '{countryCode}')";
+        }
     }
 }

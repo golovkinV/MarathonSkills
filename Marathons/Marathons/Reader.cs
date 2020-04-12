@@ -10,7 +10,7 @@ namespace Marathons
         public static DataTableReader GetTableReader(string query)
         {
             var dt = new DataTable();
-            var connection = Configuration.localServer;
+            var connection = Configuration.someeServer;
 
             using (SqlConnection con = new SqlConnection(connection))
             {

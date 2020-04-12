@@ -30,7 +30,7 @@ namespace TestingForm
         private void button2_Click(object sender, EventArgs e)
         {
             var client = new UserService.Service1Client();
-            var user = client.GetUser("evalyn.christian@hr.gov", "DqqSGUE2");
+            var user = client.Login("evalyn.christian@hr.gov", "DqqSGUE2");
             user.password = "shandao";
             user.runnerData.countryCode = "RUS";
             client.EditUser(user);
