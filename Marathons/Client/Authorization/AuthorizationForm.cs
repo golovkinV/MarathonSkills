@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class AuthorizationForm : Form
+    public partial class AuthorizationForm : BaseForm.BaseForm
     {
         public AuthorizationForm()
         {
@@ -36,7 +36,6 @@ namespace Client
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-
         }
 
         private void ShowNotification(string text)
@@ -44,5 +43,16 @@ namespace Client
             MessageBox.Show(text);
         }
 
+        private void AuthorizationForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Form mainForm = new MainForm.MainForm();
+            Hide();
+            mainForm.Show();
+        }
     }
 }
