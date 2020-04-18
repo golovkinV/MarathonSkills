@@ -23,6 +23,24 @@ namespace RunnerService
             );
         }
 
+        public List<RaceInfo> GetRaces(int runnerId)
+        {
+            var reader = Reader.GetTableReader(RunnerRequest.Races(runnerId));
+            var races = new List<RaceInfo>();
+            while (reader.Read()) {
+                var race = new RaceInfo(
+                        reader["Gender"].ToString(),
+                        reader["DateOfBirth"].ToString(),
+                        reader["RaceTime"].ToString(),
+                        reader["CountryName"].ToString(),
+                        reader["EventTypeName"].ToString(),
+                        reader["YearHeld"].ToString()
+                    );
+                races.Add(race);
+            }
+            return races;
+        }
+
         public List<Sponsor> GetSponsorship(int runnerId)
         {
             var reader = Reader.GetTableReader(RunnerRequest.Sponsorship(runnerId));
