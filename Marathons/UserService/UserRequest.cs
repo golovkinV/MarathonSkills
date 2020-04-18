@@ -27,7 +27,7 @@ namespace UserService
 
         public static string UpdateRunnerData(RunnerData runner, string email)
         {
-            return $"UPDATE [Runner] SET Gender = '{runner.gender}', DateOfBirth = '{Convert.ToDateTime(runner.birthday)}', CountryCode = '{runner.countryCode}' " +
+            return $"UPDATE [Runner] SET Gender = '{runner.gender}', DateOfBirth = '{Convert.ToDateTime(runner.dateOfBirth)}', CountryCode = '{runner.countryCode}' " +
                 $"WHERE Email = '{email}'";
         }
 
