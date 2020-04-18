@@ -17,5 +17,9 @@ namespace RunnerService
         public static string Charity(int charityId) {
             return $"SELECT * FROM [Charity] WHERE CharityId = {charityId}";
         }
+
+        public static string Races(int runnerId) {
+            return "";
+        }
     }
 }
