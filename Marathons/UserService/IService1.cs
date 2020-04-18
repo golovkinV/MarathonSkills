@@ -58,10 +58,13 @@ namespace UserService
     public class RunnerData
     {
         [DataMember]
+        public int id;
+
+        [DataMember]
         public string gender;
 
         [DataMember]
-        public string birthday;
+        public string dateOfBirth;
 
         [DataMember]
         public string countryCode;
@@ -69,10 +72,11 @@ namespace UserService
         [DataMember]
         public string country;
 
-        public RunnerData(string gender, string birthday, string countryCode, string country)
+        public RunnerData(string id, string gender, string dateOfBirth, string countryCode, string country)
         {
+            this.id = Convert.ToInt32(id);
             this.gender = gender;
-            this.birthday = birthday;
+            this.dateOfBirth = dateOfBirth;
             this.countryCode = countryCode;
             this.country = country;
         }

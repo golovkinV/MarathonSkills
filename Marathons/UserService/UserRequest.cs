@@ -15,7 +15,7 @@ namespace UserService
 
         public static string RunnerData(string email)
         {
-            return $"SELECT Runner.Gender, CONVERT(varchar, Runner.DateOfBirth, 104) as Date, Country.CountryCode, Country.CountryName " +
+            return $"SELECT Runner.RunnerId, Runner.Gender, CONVERT(varchar, Runner.DateOfBirth, 104) as Date, Country.CountryCode, Country.CountryName " +
                 $"FROM([Runner] INNER JOIN [Country] ON Runner.CountryCode = Country.CountryCode) WHERE Email = '{email}'";
         }
 
@@ -27,14 +27,8 @@ namespace UserService
 
         public static string UpdateRunnerData(RunnerData runner, string email)
         {
-            return $"UPDATE [Runner] SET Gender = '{runner.gender}', DateOfBirth = '{Convert.ToDateTime(runner.birthday)}', CountryCode = '{runner.countryCode}' " +
+            return $"UPDATE [Runner] SET Gender = '{runner.gender}', DateOfBirth = '{Convert.ToDateTime(runner.dateOfBirth)}', CountryCode = '{runner.countryCode}' " +
                 $"WHERE Email = '{email}'";
-        }
-
-        public static string Sponsorship(int runnerId) {
-            return $"SELECT Sponsorship.SponsorshipId, Sponsorship.SponsorName, Sponsorship.RegistrationId, Sponsorship.Amount, Runner.RunnerId " +
-                $"FROM (Sponsorship INNER JOIN Registration ON Sponsorship.RegistrationId = Registration.RegistrationId INNER JOIN Runner ON Runner.RunnerId = Registration.RunnerId ) " +
-                $"WHERE Runner.RunnerId = {runnerId}";
         }
 
         public static string RegisterUser(string email, string password, string firstName, string lastName) {

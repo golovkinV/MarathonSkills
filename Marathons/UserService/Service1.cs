@@ -33,6 +33,7 @@ namespace UserService
                 var runnerReader = Reader.GetTableReader(UserRequest.RunnerData(email));
                 runnerReader.Read();
                 var runner = new RunnerData(
+                    runnerReader["RunnerId"].ToString(),
                     runnerReader["Gender"].ToString(),
                     runnerReader["Date"].ToString(),
                     runnerReader["CountryCode"].ToString(),
