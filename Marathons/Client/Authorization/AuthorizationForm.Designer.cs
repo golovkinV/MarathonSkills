@@ -1,6 +1,6 @@
 ﻿namespace Client
 {
-    partial class AuthorizationForm
+    partial class AuthorizationForm : BaseForm.BaseForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -32,7 +32,26 @@
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            this.footerPanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Size = new System.Drawing.Size(668, 53);
+            // 
+            // backButton
+            // 
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
+            // footerPanel
+            // 
+            this.footerPanel.Location = new System.Drawing.Point(0, 337);
+            this.footerPanel.Size = new System.Drawing.Size(668, 29);
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
             // 
             // loginTextBox
             // 
@@ -74,13 +93,26 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 366);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(668, 366);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.loginTextBox);
+            this.MaximizeBox = false;
             this.Name = "AuthorizationForm";
             this.Text = "Marathon Skills 2015 - Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AuthorizationForm_FormClosed);
+            this.Controls.SetChildIndex(this.loginTextBox, 0);
+            this.Controls.SetChildIndex(this.passwordTextBox, 0);
+            this.Controls.SetChildIndex(this.loginButton, 0);
+            this.Controls.SetChildIndex(this.cancelButton, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.footerPanel, 0);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.footerPanel.ResumeLayout(false);
+            this.footerPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

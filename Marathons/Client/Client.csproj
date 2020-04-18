@@ -48,21 +48,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuthorizationForm\AuthorizationForm.cs">
+    <Compile Include="Authorization\AuthorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AuthorizationForm\AuthorizationForm.Designer.cs">
+    <Compile Include="Authorization\AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckRunnerCompeted\CheckRunnerCompetedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckRunnerCompeted\CheckRunnerCompetedForm.Designer.cs">
+      <DependentUpon>CheckRunnerCompetedForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\UserService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Main\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AuthorizationForm\AuthorizationForm.resx">
+    <Compile Include="RegsterAsRunner\RegisterAsRunnerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegsterAsRunner\RegisterAsRunnerForm.Designer.cs">
+      <DependentUpon>RegisterAsRunnerForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Authorization\AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckRunnerCompeted\CheckRunnerCompetedForm.resx">
+      <DependentUpon>CheckRunnerCompetedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +107,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegsterAsRunner\RegisterAsRunnerForm.resx">
+      <DependentUpon>RegisterAsRunnerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Connected Services\UserService\Client.UserService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
