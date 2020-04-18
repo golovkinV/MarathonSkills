@@ -15,7 +15,7 @@ namespace UserService
 
         public static string RunnerData(string email)
         {
-            return $"SELECT Runner.Gender, CONVERT(varchar, Runner.DateOfBirth, 104) as Date, Country.CountryCode, Country.CountryName " +
+            return $"SELECT Runner.RunnerId, Runner.Gender, CONVERT(varchar, Runner.DateOfBirth, 104) as Date, Country.CountryCode, Country.CountryName " +
                 $"FROM([Runner] INNER JOIN [Country] ON Runner.CountryCode = Country.CountryCode) WHERE Email = '{email}'";
         }
 
