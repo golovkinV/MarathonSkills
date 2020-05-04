@@ -58,10 +58,19 @@ namespace TestingForm
         {
             var client = new AdminService.AdminServiceClient();
             var list = new List<Volunteer>();
-            //list.Add(new Volunteer("Ivan", "Petrov", "RUS", "Male"));
-            //list.Add(new Volunteer("Ahmad", "Tea", "RUS", "Male"));
-            //list.Add(new Volunteer("Ivan", "Petrov", "RUS", "Male"));
-            //await client.AddVolunteersAsync(list.ToArray());
+            var kek = new Volunteer();
+            kek.firstName = "Ivan";
+            kek.lastName = "Petrov";
+            kek.countryCode = "RUS";
+            kek.gender = "Male";
+            list.Add(kek);
+            var kek1 = new Volunteer();
+            kek1.firstName = "Ahmad";
+            kek1.lastName = "Tea";
+            kek1.countryCode = "RUS";
+            kek1.gender = "Male";
+            list.Add(kek1);
+            await client.AddVolunteersAsync(list.ToArray());
         }
 
         private async void button6_Click(object sender, EventArgs e)
