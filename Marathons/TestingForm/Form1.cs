@@ -35,5 +35,15 @@ namespace TestingForm
             user.runnerData.countryCode = "RUS";
             client.EditUser(user);
         }
+
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            var client = new AdminService.Service1Client();
+            var task = await client.GetAllCharityAsync();
+            var charity = task[0];
+            charity.name = "Arise";
+
+            await client.EditCharityAsync(charity);
+        }
     }
 }
