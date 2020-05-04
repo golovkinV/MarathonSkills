@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TestingForm.AdminService;
 
 namespace TestingForm
 {
@@ -44,6 +45,22 @@ namespace TestingForm
             charity.name = "Arise";
 
             await client.EditCharityAsync(charity);
+        }
+
+        private async void button4_Click(object sender, EventArgs e)
+        {
+            var client = new AdminService.Service1Client();
+            await client.AddCharityAsync("KEK", "TEST", "KEK");
+        }
+
+        private async void button5_Click(object sender, EventArgs e)
+        {
+            var client = new AdminService.Service1Client();
+            var list = new List<Volunteer>();
+            list.Add(new Volunteer("Ivan", "Petrov", "RUS", "Male"));
+            list.Add(new Volunteer("Ahmad", "Tea", "RUS", "Male"));
+            list.Add(new Volunteer("Ivan", "Petrov", "RUS", "Male"));
+            await client.AddVolunteersAsync(list.ToArray()); 
         }
     }
 }

@@ -19,6 +19,18 @@
   <wsdl:message name="IService1_EditCharity_OutputMessage">
     <wsdl:part name="parameters" element="tns:EditCharityResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_AddCharity_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCharity" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCharity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCharityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddVolunteers_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddVolunteers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddVolunteers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddVolunteersResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetAllCharity">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllCharity" message="tns:IService1_GetAllCharity_InputMessage" />
@@ -27,6 +39,14 @@
     <wsdl:operation name="EditCharity">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/EditCharity" message="tns:IService1_EditCharity_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/EditCharityResponse" message="tns:IService1_EditCharity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCharity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddCharity" message="tns:IService1_AddCharity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddCharityResponse" message="tns:IService1_AddCharity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddVolunteers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddVolunteers" message="tns:IService1_AddVolunteers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddVolunteersResponse" message="tns:IService1_AddVolunteers_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -42,6 +62,24 @@
     </wsdl:operation>
     <wsdl:operation name="EditCharity">
       <soap:operation soapAction="http://tempuri.org/IService1/EditCharity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCharity">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddCharity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddVolunteers">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddVolunteers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

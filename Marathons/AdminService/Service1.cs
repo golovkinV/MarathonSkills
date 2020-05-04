@@ -42,5 +42,33 @@ namespace AdminService
                 cmd.ExecuteNonQuery();
             }
         }
+
+        public void AddCharity(string name, string desc, string logo)
+        {
+            using (SqlConnection con = new SqlConnection(Configuration.someeServer))
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = AdminRequest.NewCharity(name, desc, logo);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void AddVolunteers(List<Volunteer> volunteers)
+        {
+            using (SqlConnection con = new SqlConnection(Configuration.someeServer))
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+
+                volunteers.ForEach(volunteer =>
+                {
+                    cmd.CommandText = AdminRequest.NewVolunteer(volunteer);
+                    cmd.ExecuteNonQuery();
+                });
+            }
+        }
     }
 }

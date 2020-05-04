@@ -15,4 +15,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Charity" nillable="true" type="tns:Charity" />
+  <xs:complexType name="ArrayOfVolunteer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Volunteer" nillable="true" type="tns:Volunteer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVolunteer" nillable="true" type="tns:ArrayOfVolunteer" />
+  <xs:complexType name="Volunteer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="countryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Volunteer" nillable="true" type="tns:Volunteer" />
 </xs:schema>
