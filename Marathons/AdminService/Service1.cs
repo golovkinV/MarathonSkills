@@ -11,7 +11,7 @@ using System.Data;
 namespace AdminService
 {
 
-    public class Service1 : IService1
+    public class Service1 : IAdminService
     {
 
         public List<Charity> GetAllCharity()
@@ -69,6 +69,25 @@ namespace AdminService
                     cmd.ExecuteNonQuery();
                 });
             }
+        }
+
+        public List<User> GetAllUser()
+        {
+            var reader = Reader.GetTableReader(AdminRequest.Users());
+            var users = new List<User>();
+            while (reader.Read())
+            {
+                var role = new Role(reader["RoleId"].ToString());
+                var user = new User(
+                        reader["Email"].ToString(),
+                        reader["Password"].ToString(),
+                        reader["FirstName"].ToString(),
+                        reader["LastName"].ToString(),
+                        role
+                    );
+                users.Add(user);
+            }
+            return users;
         }
     }
 }

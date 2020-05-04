@@ -207,59 +207,235 @@ namespace TestingForm.AdminService {
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AdminService.IService1")]
-    public interface IService1 {
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/AdminService")]
+    [System.SerializableAttribute()]
+    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllCharity", ReplyAction="http://tempuri.org/IService1/GetAllCharityResponse")]
-        TestingForm.AdminService.Charity[] GetAllCharity();
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllCharity", ReplyAction="http://tempuri.org/IService1/GetAllCharityResponse")]
-        System.Threading.Tasks.Task<TestingForm.AdminService.Charity[]> GetAllCharityAsync();
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string emailField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditCharity", ReplyAction="http://tempuri.org/IService1/EditCharityResponse")]
-        void EditCharity(TestingForm.AdminService.Charity charity);
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string firstNameField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditCharity", ReplyAction="http://tempuri.org/IService1/EditCharityResponse")]
-        System.Threading.Tasks.Task EditCharityAsync(TestingForm.AdminService.Charity charity);
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string lastNameField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddCharity", ReplyAction="http://tempuri.org/IService1/AddCharityResponse")]
-        void AddCharity(string name, string desc, string logo);
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string passwordField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddCharity", ReplyAction="http://tempuri.org/IService1/AddCharityResponse")]
-        System.Threading.Tasks.Task AddCharityAsync(string name, string desc, string logo);
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestingForm.AdminService.Role roleField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddVolunteers", ReplyAction="http://tempuri.org/IService1/AddVolunteersResponse")]
-        void AddVolunteers(TestingForm.AdminService.Volunteer[] volunteers);
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddVolunteers", ReplyAction="http://tempuri.org/IService1/AddVolunteersResponse")]
-        System.Threading.Tasks.Task AddVolunteersAsync(TestingForm.AdminService.Volunteer[] volunteers);
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.emailField, value) != true)) {
+                    this.emailField = value;
+                    this.RaisePropertyChanged("email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string firstName {
+            get {
+                return this.firstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.firstNameField, value) != true)) {
+                    this.firstNameField = value;
+                    this.RaisePropertyChanged("firstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string lastName {
+            get {
+                return this.lastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.lastNameField, value) != true)) {
+                    this.lastNameField = value;
+                    this.RaisePropertyChanged("lastName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.passwordField, value) != true)) {
+                    this.passwordField = value;
+                    this.RaisePropertyChanged("password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestingForm.AdminService.Role role {
+            get {
+                return this.roleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.roleField, value) != true)) {
+                    this.roleField = value;
+                    this.RaisePropertyChanged("role");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Role", Namespace="http://schemas.datacontract.org/2004/07/AdminService")]
+    [System.SerializableAttribute()]
+    public partial class Role : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string roleIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string roleId {
+            get {
+                return this.roleIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.roleIdField, value) != true)) {
+                    this.roleIdField = value;
+                    this.RaisePropertyChanged("roleId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService1Channel : TestingForm.AdminService.IService1, System.ServiceModel.IClientChannel {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AdminService.IAdminService")]
+    public interface IAdminService {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllCharity", ReplyAction="http://tempuri.org/IAdminService/GetAllCharityResponse")]
+        TestingForm.AdminService.Charity[] GetAllCharity();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllCharity", ReplyAction="http://tempuri.org/IAdminService/GetAllCharityResponse")]
+        System.Threading.Tasks.Task<TestingForm.AdminService.Charity[]> GetAllCharityAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/EditCharity", ReplyAction="http://tempuri.org/IAdminService/EditCharityResponse")]
+        void EditCharity(TestingForm.AdminService.Charity charity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/EditCharity", ReplyAction="http://tempuri.org/IAdminService/EditCharityResponse")]
+        System.Threading.Tasks.Task EditCharityAsync(TestingForm.AdminService.Charity charity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddCharity", ReplyAction="http://tempuri.org/IAdminService/AddCharityResponse")]
+        void AddCharity(string name, string desc, string logo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddCharity", ReplyAction="http://tempuri.org/IAdminService/AddCharityResponse")]
+        System.Threading.Tasks.Task AddCharityAsync(string name, string desc, string logo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddVolunteers", ReplyAction="http://tempuri.org/IAdminService/AddVolunteersResponse")]
+        void AddVolunteers(TestingForm.AdminService.Volunteer[] volunteers);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddVolunteers", ReplyAction="http://tempuri.org/IAdminService/AddVolunteersResponse")]
+        System.Threading.Tasks.Task AddVolunteersAsync(TestingForm.AdminService.Volunteer[] volunteers);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllUser", ReplyAction="http://tempuri.org/IAdminService/GetAllUserResponse")]
+        TestingForm.AdminService.User[] GetAllUser();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllUser", ReplyAction="http://tempuri.org/IAdminService/GetAllUserResponse")]
+        System.Threading.Tasks.Task<TestingForm.AdminService.User[]> GetAllUserAsync();
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IAdminServiceChannel : TestingForm.AdminService.IAdminService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service1Client : System.ServiceModel.ClientBase<TestingForm.AdminService.IService1>, TestingForm.AdminService.IService1 {
+    public partial class AdminServiceClient : System.ServiceModel.ClientBase<TestingForm.AdminService.IAdminService>, TestingForm.AdminService.IAdminService {
         
-        public Service1Client() {
+        public AdminServiceClient() {
         }
         
-        public Service1Client(string endpointConfigurationName) : 
+        public AdminServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public Service1Client(string endpointConfigurationName, string remoteAddress) : 
+        public AdminServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public Service1Client(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public AdminServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public AdminServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
@@ -293,6 +469,14 @@ namespace TestingForm.AdminService {
         
         public System.Threading.Tasks.Task AddVolunteersAsync(TestingForm.AdminService.Volunteer[] volunteers) {
             return base.Channel.AddVolunteersAsync(volunteers);
+        }
+        
+        public TestingForm.AdminService.User[] GetAllUser() {
+            return base.Channel.GetAllUser();
+        }
+        
+        public System.Threading.Tasks.Task<TestingForm.AdminService.User[]> GetAllUserAsync() {
+            return base.Channel.GetAllUserAsync();
         }
     }
 }

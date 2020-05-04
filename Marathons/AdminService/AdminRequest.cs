@@ -30,5 +30,10 @@ namespace AdminService
             return $"INSERT INTO [Volunteer] (FirstName, LastName, CountryCode, Gender) " +
                 $"VALUES('{volunteer.firstName}', '{volunteer.lastName}', '{volunteer.countryCode}', '{volunteer.gender}')";
         }
+
+        public static string Users()
+        {
+            return "SELECT * FROM [User]";
+        }
     }
 }

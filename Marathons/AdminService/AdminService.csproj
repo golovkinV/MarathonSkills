@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminRequest.cs" />
-    <Compile Include="IService1.cs" />
+    <Compile Include="IAdminService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service1.cs" />
   </ItemGroup>

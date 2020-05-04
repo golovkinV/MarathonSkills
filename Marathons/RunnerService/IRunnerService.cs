@@ -9,7 +9,7 @@ namespace RunnerService
 {
 
     [ServiceContract]
-    public interface IService1
+    public interface IRunnerService
     {
         [OperationContract]
         List<Sponsor> GetSponsorship(int runnerId);

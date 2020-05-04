@@ -11,7 +11,7 @@ using System.Data;
 namespace UserService
 {
 
-    public class Service1 : IService1
+    public class Service1 : IUserService
     {
 
         public User Login(string email, string password)

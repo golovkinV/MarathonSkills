@@ -9,7 +9,7 @@ using System.Text;
 namespace RunnerService
 {
 
-    public class Service1 : IService1
+    public class Service1 : IRunnerService
     {
         public Charity GetCharity(int charityId)
         {

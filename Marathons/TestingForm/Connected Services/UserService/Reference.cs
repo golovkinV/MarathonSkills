@@ -209,16 +209,19 @@ namespace TestingForm.UserService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string birthdayField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string countryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string countryCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string dateOfBirthField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string genderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -227,19 +230,6 @@ namespace TestingForm.UserService {
             }
             set {
                 this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string birthday {
-            get {
-                return this.birthdayField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.birthdayField, value) != true)) {
-                    this.birthdayField = value;
-                    this.RaisePropertyChanged("birthday");
-                }
             }
         }
         
@@ -270,6 +260,19 @@ namespace TestingForm.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string dateOfBirth {
+            get {
+                return this.dateOfBirthField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.dateOfBirthField, value) != true)) {
+                    this.dateOfBirthField = value;
+                    this.RaisePropertyChanged("dateOfBirth");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string gender {
             get {
                 return this.genderField;
@@ -278,6 +281,19 @@ namespace TestingForm.UserService {
                 if ((object.ReferenceEquals(this.genderField, value) != true)) {
                     this.genderField = value;
                     this.RaisePropertyChanged("gender");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
                 }
             }
         }
@@ -293,52 +309,52 @@ namespace TestingForm.UserService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="UserService.IService1")]
-    public interface IService1 {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="UserService.IUserService")]
+    public interface IUserService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/Login", ReplyAction="http://tempuri.org/IUserService/LoginResponse")]
         TestingForm.UserService.User Login(string email, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/Login", ReplyAction="http://tempuri.org/IUserService/LoginResponse")]
         System.Threading.Tasks.Task<TestingForm.UserService.User> LoginAsync(string email, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditUser", ReplyAction="http://tempuri.org/IService1/EditUserResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/EditUser", ReplyAction="http://tempuri.org/IUserService/EditUserResponse")]
         void EditUser(TestingForm.UserService.User user);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditUser", ReplyAction="http://tempuri.org/IService1/EditUserResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/EditUser", ReplyAction="http://tempuri.org/IUserService/EditUserResponse")]
         System.Threading.Tasks.Task EditUserAsync(TestingForm.UserService.User user);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/RegisterAsRunner", ReplyAction="http://tempuri.org/IService1/RegisterAsRunnerResponse")]
-        void RegisterAsRunner(TestingForm.UserService.User user);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/RegisterAsRunner", ReplyAction="http://tempuri.org/IUserService/RegisterAsRunnerResponse")]
+        void RegisterAsRunner(string email, string password, string firstName, string lastName, string gender, string dateOfBirth, string countryCode);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/RegisterAsRunner", ReplyAction="http://tempuri.org/IService1/RegisterAsRunnerResponse")]
-        System.Threading.Tasks.Task RegisterAsRunnerAsync(TestingForm.UserService.User user);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/RegisterAsRunner", ReplyAction="http://tempuri.org/IUserService/RegisterAsRunnerResponse")]
+        System.Threading.Tasks.Task RegisterAsRunnerAsync(string email, string password, string firstName, string lastName, string gender, string dateOfBirth, string countryCode);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService1Channel : TestingForm.UserService.IService1, System.ServiceModel.IClientChannel {
+    public interface IUserServiceChannel : TestingForm.UserService.IUserService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service1Client : System.ServiceModel.ClientBase<TestingForm.UserService.IService1>, TestingForm.UserService.IService1 {
+    public partial class UserServiceClient : System.ServiceModel.ClientBase<TestingForm.UserService.IUserService>, TestingForm.UserService.IUserService {
         
-        public Service1Client() {
+        public UserServiceClient() {
         }
         
-        public Service1Client(string endpointConfigurationName) : 
+        public UserServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public Service1Client(string endpointConfigurationName, string remoteAddress) : 
+        public UserServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public Service1Client(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public UserServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public UserServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
@@ -358,12 +374,12 @@ namespace TestingForm.UserService {
             return base.Channel.EditUserAsync(user);
         }
         
-        public void RegisterAsRunner(TestingForm.UserService.User user) {
-            base.Channel.RegisterAsRunner(user);
+        public void RegisterAsRunner(string email, string password, string firstName, string lastName, string gender, string dateOfBirth, string countryCode) {
+            base.Channel.RegisterAsRunner(email, password, firstName, lastName, gender, dateOfBirth, countryCode);
         }
         
-        public System.Threading.Tasks.Task RegisterAsRunnerAsync(TestingForm.UserService.User user) {
-            return base.Channel.RegisterAsRunnerAsync(user);
+        public System.Threading.Tasks.Task RegisterAsRunnerAsync(string email, string password, string firstName, string lastName, string gender, string dateOfBirth, string countryCode) {
+            return base.Channel.RegisterAsRunnerAsync(email, password, firstName, lastName, gender, dateOfBirth, countryCode);
         }
     }
 }

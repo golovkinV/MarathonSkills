@@ -9,7 +9,7 @@ namespace AdminService
 {
 
     [ServiceContract]
-    public interface IService1
+    public interface IAdminService
     {
         [OperationContract]
         List<Charity> GetAllCharity();
@@ -22,6 +22,9 @@ namespace AdminService
 
         [OperationContract]
         void AddVolunteers(List<Volunteer> volunteers);
+
+        [OperationContract]
+        List<User> GetAllUser();
     }
 
 
@@ -71,6 +74,69 @@ namespace AdminService
             this.lastName = lastName;
             this.countryCode = countryCode;
             this.gender = gender;
+        }
+    }
+
+
+    [DataContract]
+    public class User
+    {
+        [DataMember]
+        public string email;
+
+        [DataMember]
+        public string password;
+
+        [DataMember]
+        public string firstName;
+
+        [DataMember]
+        public string lastName;
+
+        [DataMember]
+        public Role role;
+
+
+        public User(string email, string password,
+            string firstName, string lastName, Role role)
+        {
+            this.email = email;
+            this.password = password;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.role = role;
+        }
+    }
+
+
+    [DataContract]
+    public class Role
+    {
+        [DataMember]
+        public string roleId;
+
+        [DataMember]
+        public string name;
+
+        public Role(string id)
+        {
+            roleId = id;
+            name = getRoleName(id);
+        }
+
+        private string getRoleName(string id)
+        {
+            switch (id)
+            {
+                case "A":
+                    return "Administrator";
+                case "C":
+                    return "Coordinator";
+                case "R":
+                    return "Runner";
+                default:
+                    return "";
+            }
         }
     }
 }
