@@ -9,7 +9,7 @@ namespace UserService
 {
     
     [ServiceContract]
-    public interface IService1
+    public interface IUserService
     {
         [OperationContract]
         User Login(string email, string password);
