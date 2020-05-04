@@ -58,10 +58,10 @@ namespace TestingForm
         {
             var client = new AdminService.AdminServiceClient();
             var list = new List<Volunteer>();
-            list.Add(new Volunteer("Ivan", "Petrov", "RUS", "Male"));
-            list.Add(new Volunteer("Ahmad", "Tea", "RUS", "Male"));
-            list.Add(new Volunteer("Ivan", "Petrov", "RUS", "Male"));
-            await client.AddVolunteersAsync(list.ToArray());
+            //list.Add(new Volunteer("Ivan", "Petrov", "RUS", "Male"));
+            //list.Add(new Volunteer("Ahmad", "Tea", "RUS", "Male"));
+            //list.Add(new Volunteer("Ivan", "Petrov", "RUS", "Male"));
+            //await client.AddVolunteersAsync(list.ToArray());
         }
 
         private async void button6_Click(object sender, EventArgs e)
@@ -69,6 +69,21 @@ namespace TestingForm
             var client = new AdminService.AdminServiceClient();
             var keks = await client.GetAllUserAsync();
             var lol = 0;
+        }
+
+        private async void button7_Click(object sender, EventArgs e)
+        {
+            var client = new AdminService.AdminServiceClient();
+            var keks = await client.GetAllUserAsync();
+            var user = keks[0];
+            user.firstName = "TEST";
+            await client.EditUserAsync(user);
+        }
+
+        private async void button8_Click(object sender, EventArgs e)
+        {
+            var client = new AdminService.AdminServiceClient();
+            await client.AddUserAsync("test", "test", "test", "test", "C");
         }
     }
 }

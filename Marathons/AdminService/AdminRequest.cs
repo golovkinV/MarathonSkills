@@ -35,5 +35,16 @@ namespace AdminService
         {
             return "SELECT * FROM [User]";
         }
+
+        public static string UpdateUser(User user) 
+        {
+            return $"UPDATE [User] SET Password = '{user.password}', FirstName = '{user.firstName}', LastName = '{user.lastName}', RoleId = '{user.role.roleId}' " +
+                $"WHERE Email = '{user.email}'";
+        }
+
+        public static string NewUser(string email, string password, string firstName, string lastName, string roleId) {
+            return $"INSERT INTO [User] (Email, Password, FirstName, LastName, RoleId) " +
+                $"VALUES('{email}', '{password}', '{firstName}', '{lastName}', '{roleId}')";
+        }
     }
 }

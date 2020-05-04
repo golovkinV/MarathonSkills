@@ -89,5 +89,29 @@ namespace AdminService
             }
             return users;
         }
+
+        public void EditUser(User user)
+        {
+            using (SqlConnection con = new SqlConnection(Configuration.someeServer))
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = AdminRequest.UpdateUser(user);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void AddUser(string email, string password, string firstName, string lastName, string roleId)
+        {
+            using (SqlConnection con = new SqlConnection(Configuration.someeServer))
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = AdminRequest.NewUser(email, password, firstName, lastName, roleId);
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

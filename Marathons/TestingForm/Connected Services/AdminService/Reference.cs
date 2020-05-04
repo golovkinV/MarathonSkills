@@ -126,15 +126,7 @@ namespace TestingForm.AdminService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string lastNameField;
-
-        public Volunteer(string firstName, string lastName, string countryCode, string gender)
-        {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.countryCode = countryCode;
-            this.gender = gender;
-        }
-
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -410,6 +402,18 @@ namespace TestingForm.AdminService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllUser", ReplyAction="http://tempuri.org/IAdminService/GetAllUserResponse")]
         System.Threading.Tasks.Task<TestingForm.AdminService.User[]> GetAllUserAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/EditUser", ReplyAction="http://tempuri.org/IAdminService/EditUserResponse")]
+        void EditUser(TestingForm.AdminService.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/EditUser", ReplyAction="http://tempuri.org/IAdminService/EditUserResponse")]
+        System.Threading.Tasks.Task EditUserAsync(TestingForm.AdminService.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddUser", ReplyAction="http://tempuri.org/IAdminService/AddUserResponse")]
+        void AddUser(string email, string password, string firstName, string lastName, string roleId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddUser", ReplyAction="http://tempuri.org/IAdminService/AddUserResponse")]
+        System.Threading.Tasks.Task AddUserAsync(string email, string password, string firstName, string lastName, string roleId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -477,6 +481,22 @@ namespace TestingForm.AdminService {
         
         public System.Threading.Tasks.Task<TestingForm.AdminService.User[]> GetAllUserAsync() {
             return base.Channel.GetAllUserAsync();
+        }
+        
+        public void EditUser(TestingForm.AdminService.User user) {
+            base.Channel.EditUser(user);
+        }
+        
+        public System.Threading.Tasks.Task EditUserAsync(TestingForm.AdminService.User user) {
+            return base.Channel.EditUserAsync(user);
+        }
+        
+        public void AddUser(string email, string password, string firstName, string lastName, string roleId) {
+            base.Channel.AddUser(email, password, firstName, lastName, roleId);
+        }
+        
+        public System.Threading.Tasks.Task AddUserAsync(string email, string password, string firstName, string lastName, string roleId) {
+            return base.Channel.AddUserAsync(email, password, firstName, lastName, roleId);
         }
     }
 }

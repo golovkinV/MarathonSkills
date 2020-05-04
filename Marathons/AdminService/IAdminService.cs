@@ -25,6 +25,12 @@ namespace AdminService
 
         [OperationContract]
         List<User> GetAllUser();
+
+        [OperationContract]
+        void EditUser(User user);
+
+        [OperationContract]
+        void AddUser(string email, string password, string firstName, string lastName, string roleId);
     }
 
 
