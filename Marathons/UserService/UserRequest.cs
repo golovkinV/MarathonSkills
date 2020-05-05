@@ -27,7 +27,7 @@ namespace UserService
 
         public static string UpdateRunnerData(RunnerData runner, string email)
         {
-            return $"UPDATE [Runner] SET Gender = '{runner.gender}', DateOfBirth = '{Convert.ToDateTime(runner.dateOfBirth)}', CountryCode = '{runner.countryCode}' " +
+            return $"UPDATE [Runner] SET Gender = '{runner.gender}', DateOfBirth = @DateOfBirth, CountryCode = '{runner.country.code}' " +
                 $"WHERE Email = '{email}'";
         }
 
@@ -36,9 +36,45 @@ namespace UserService
                 $"VALUES('{email}', '{password}', '{firstName}', '{lastName}', 'R')";
         }
 
-        public static string RegisterRunner(string email, string gender, string dateOfBirth, string countryCode) {
+        public static string RegisterRunner(string email, string gender, string countryCode) {
             return $"INSERT INTO [Runner] (Email, Gender, DateOfBirth, CountryCode) " +
-                $"VALUES('{email}', '{gender}', '{Convert.ToDateTime(dateOfBirth)}', '{countryCode}')";
+                $"VALUES('{email}', '{gender}', @DateOfBirth, '{countryCode}')";
+        }
+
+        public static string Events() 
+        {
+            return "SELECT EventId, EventName, Cost FROM [Event] WHERE MarathonId = 5";
+        }
+
+        public static string KitOptions()
+        {
+            return "SELECT * FROM [RaceKitOption]";
+        }
+
+        public static string Charities()
+        {
+            return "SELECT CharityId, CharityName FROM [Charity]";
+        }
+
+        public static string Registration(int runnerId, string kitOptionId, double cost, int charityId)
+        {
+            return $"INSERT INTO [Registration] (RunnerId, RegistrationDateTime, RaceKitOptionId, RegistrationStatusId, Cost, CharityId, SponsorshipTarget) " +
+                $"VALUES('{runnerId}', @Today, '{kitOptionId}', '1', '{cost}', '{charityId}', '0')";
+        }
+
+        public static string GetLastRegistrationId(int runnerId)
+        {
+            return $"SELECT TOP 1 RegistrationId FROM Registration WHERE RunnerId = {runnerId} ORDER BY RegistrationId DESC";
+        }
+
+        public static string RegistrationEvent(int registrationId, string eventId)
+        {
+            return $"INSERT INTO [RegistrationEvent] (RegistrationId, EventId) VALUES('{registrationId}', '{eventId}')";
+        }
+
+        public static string Countries()
+        {
+            return "SELECT * FROM [Country]";
         }
     }
 }

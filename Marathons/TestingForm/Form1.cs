@@ -34,7 +34,7 @@ namespace TestingForm
             var client = new UserService.UserServiceClient();
             var user = client.Login("evalyn.christian@hr.gov", "DqqSGUE2");
             user.password = "shandao";
-            user.runnerData.countryCode = "RUS";
+            user.runnerData.country.code = "RUS";
             //client.EditUser(user);
         }
 
@@ -93,6 +93,16 @@ namespace TestingForm
         {
             var client = new AdminService.AdminServiceClient();
             await client.AddUserAsync("test", "test", "test", "test", "C");
+        }
+
+        private async void button9_Click(object sender, EventArgs e)
+        {
+            var client = new UserService.UserServiceClient();
+            await client.RegisterAsRunnerAsync("test@yandex.ru", "kek", "Ahmad", "Tea", "Male", "15.05.1999", "RUS");
+            var list = new List<string>();
+            list.Add("15_5FM");
+            list.Add("15_5FR");
+            await client.RegisterForEventAsync("test@yandex.ru", list.ToArray(), "A", 13, 20);
         }
     }
 }

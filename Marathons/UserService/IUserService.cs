@@ -7,7 +7,7 @@ using System.Text;
 
 namespace UserService
 {
-    
+
     [ServiceContract]
     public interface IUserService
     {
@@ -18,8 +18,24 @@ namespace UserService
         void EditUser(User user);
 
         [OperationContract]
-        void RegisterAsRunner(string email, string password, string firstName, string lastName, 
+        void RegisterAsRunner(string email, string password, string firstName, string lastName,
             string gender, string dateOfBirth, string countryCode);
+
+        [OperationContract]
+        void RegisterForEvent(string email, List<string> eventIds,
+            string kitOptionId, int charityId, double registrationCost);
+
+        [OperationContract]
+        List<Event> GetEvents();
+
+        [OperationContract]
+        List<KitOption> GetKitOptions();
+
+        [OperationContract]
+        List<Charity> GetCharities();
+
+        [OperationContract]
+        List<Country> GetCountries();
     }
 
     [DataContract]
@@ -43,7 +59,7 @@ namespace UserService
         public RunnerData runnerData = null;
 
 
-        public User(string email, string password, 
+        public User(string email, string password,
             string firstName, string lastName, Role role)
         {
             this.email = email;
@@ -67,17 +83,13 @@ namespace UserService
         public string dateOfBirth;
 
         [DataMember]
-        public string countryCode;
+        public Country country;
 
-        [DataMember]
-        public string country;
-
-        public RunnerData(string id, string gender, string dateOfBirth, string countryCode, string country)
+        public RunnerData(string id, string gender, string dateOfBirth, Country country)
         {
             this.id = Convert.ToInt32(id);
             this.gender = gender;
             this.dateOfBirth = dateOfBirth;
-            this.countryCode = countryCode;
             this.country = country;
         }
     }
@@ -110,6 +122,78 @@ namespace UserService
                 default:
                     return "";
             }
+        }
+    }
+
+    [DataContract]
+    public class Event
+    {
+        [DataMember]
+        public string id;
+
+        [DataMember]
+        public string name;
+
+        [DataMember]
+        public double cost;
+
+        public Event(string id, string name, string cost)
+        {
+            this.id = id;
+            this.name = name;
+            this.cost = Convert.ToDouble(cost);
+        }
+    }
+
+    [DataContract]
+    public class KitOption
+    {
+        [DataMember]
+        public string id;
+
+        [DataMember]
+        public string name;
+
+        [DataMember]
+        public double cost;
+
+        public KitOption(string id, string name, string cost)
+        {
+            this.id = id;
+            this.name = name;
+            this.cost = Convert.ToDouble(cost);
+        }
+    }
+
+    [DataContract]
+    public class Charity
+    {
+        [DataMember]
+        public int id;
+
+        [DataMember]
+        public string name;
+
+        public Charity(string id, string name)
+        {
+            this.id = Convert.ToInt32(id);
+            this.name = name;
+        }
+    }
+
+    [DataContract]
+    public class Country
+    {
+        [DataMember]
+        public string code;
+
+        [DataMember]
+        public string name;
+        
+        public Country(string code, string name)
+        {
+            this.code = code;
+            this.name = name;
         }
     }
 }
