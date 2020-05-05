@@ -108,12 +108,15 @@ namespace UserService
         private RunnerData GetRunnerData(string email) {
             var runnerReader = Reader.GetTableReader(UserRequest.RunnerData(email));
             runnerReader.Read();
+            var country = new Country(
+                runnerReader["CountryCode"].ToString(),
+                runnerReader["CountryName"].ToString()
+            );
             var runner = new RunnerData(
                 runnerReader["RunnerId"].ToString(),
                 runnerReader["Gender"].ToString(),
                 runnerReader["Date"].ToString(),
-                runnerReader["CountryCode"].ToString(),
-                runnerReader["CountryName"].ToString()
+                country
             );
             return runner;
         }
@@ -163,6 +166,21 @@ namespace UserService
                 charities.Add(charity);
             }
             return charities;
+        }
+
+        public List<Country> GetCountries()
+        {
+            var reader = Reader.GetTableReader(UserRequest.Countries());
+            var countries = new List<Country>();
+            while (reader.Read())
+            {
+                var country = new Country(
+                    reader["CountryCode"].ToString(),
+                    reader["CountryName"].ToString()
+                );
+                countries.Add(country);
+            }
+            return countries;
         }
     }
 }

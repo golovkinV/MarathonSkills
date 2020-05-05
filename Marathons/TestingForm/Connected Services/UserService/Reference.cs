@@ -209,10 +209,7 @@ namespace TestingForm.UserService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string countryField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string countryCodeField;
+        private TestingForm.UserService.Country countryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string dateOfBirthField;
@@ -234,7 +231,7 @@ namespace TestingForm.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string country {
+        public TestingForm.UserService.Country country {
             get {
                 return this.countryField;
             }
@@ -242,19 +239,6 @@ namespace TestingForm.UserService {
                 if ((object.ReferenceEquals(this.countryField, value) != true)) {
                     this.countryField = value;
                     this.RaisePropertyChanged("country");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string countryCode {
-            get {
-                return this.countryCodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.countryCodeField, value) != true)) {
-                    this.countryCodeField = value;
-                    this.RaisePropertyChanged("countryCode");
                 }
             }
         }
@@ -294,6 +278,67 @@ namespace TestingForm.UserService {
                 if ((this.idField.Equals(value) != true)) {
                     this.idField = value;
                     this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Country", Namespace="http://schemas.datacontract.org/2004/07/UserService")]
+    [System.SerializableAttribute()]
+    public partial class Country : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string codeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string code {
+            get {
+                return this.codeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.codeField, value) != true)) {
+                    this.codeField = value;
+                    this.RaisePropertyChanged("code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
                 }
             }
         }
@@ -568,6 +613,12 @@ namespace TestingForm.UserService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetCharities", ReplyAction="http://tempuri.org/IUserService/GetCharitiesResponse")]
         System.Threading.Tasks.Task<TestingForm.UserService.Charity[]> GetCharitiesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetCountries", ReplyAction="http://tempuri.org/IUserService/GetCountriesResponse")]
+        TestingForm.UserService.Country[] GetCountries();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetCountries", ReplyAction="http://tempuri.org/IUserService/GetCountriesResponse")]
+        System.Threading.Tasks.Task<TestingForm.UserService.Country[]> GetCountriesAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -651,6 +702,14 @@ namespace TestingForm.UserService {
         
         public System.Threading.Tasks.Task<TestingForm.UserService.Charity[]> GetCharitiesAsync() {
             return base.Channel.GetCharitiesAsync();
+        }
+        
+        public TestingForm.UserService.Country[] GetCountries() {
+            return base.Channel.GetCountries();
+        }
+        
+        public System.Threading.Tasks.Task<TestingForm.UserService.Country[]> GetCountriesAsync() {
+            return base.Channel.GetCountriesAsync();
         }
     }
 }

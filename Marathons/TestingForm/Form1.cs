@@ -34,7 +34,7 @@ namespace TestingForm
             var client = new UserService.UserServiceClient();
             var user = client.Login("evalyn.christian@hr.gov", "DqqSGUE2");
             user.password = "shandao";
-            user.runnerData.countryCode = "RUS";
+            user.runnerData.country.code = "RUS";
             //client.EditUser(user);
         }
 

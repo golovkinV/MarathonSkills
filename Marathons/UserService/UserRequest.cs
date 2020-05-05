@@ -27,7 +27,7 @@ namespace UserService
 
         public static string UpdateRunnerData(RunnerData runner, string email)
         {
-            return $"UPDATE [Runner] SET Gender = '{runner.gender}', DateOfBirth = @DateOfBirth, CountryCode = '{runner.countryCode}' " +
+            return $"UPDATE [Runner] SET Gender = '{runner.gender}', DateOfBirth = @DateOfBirth, CountryCode = '{runner.country.code}' " +
                 $"WHERE Email = '{email}'";
         }
 
@@ -70,6 +70,11 @@ namespace UserService
         public static string RegistrationEvent(int registrationId, string eventId)
         {
             return $"INSERT INTO [RegistrationEvent] (RegistrationId, EventId) VALUES('{registrationId}', '{eventId}')";
+        }
+
+        public static string Countries()
+        {
+            return "SELECT * FROM [Country]";
         }
     }
 }
