@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.headLabel = new System.Windows.Forms.Label();
             this.closePopupButton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.logAsAdminButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.logAsRunnerButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -103,7 +103,7 @@
             this.popupPanel.Controls.Add(this.label1);
             this.popupPanel.Controls.Add(this.headLabel);
             this.popupPanel.Controls.Add(this.closePopupButton);
-            this.popupPanel.Controls.Add(this.button3);
+            this.popupPanel.Controls.Add(this.logAsAdminButton);
             this.popupPanel.Controls.Add(this.button2);
             this.popupPanel.Controls.Add(this.logAsRunnerButton);
             this.popupPanel.Location = new System.Drawing.Point(138, 79);
@@ -145,14 +145,15 @@
             this.closePopupButton.UseVisualStyleBackColor = false;
             this.closePopupButton.Click += new System.EventHandler(this.closePopupButton_Click);
             // 
-            // button3
+            // logAsAdminButton
             // 
-            this.button3.Location = new System.Drawing.Point(158, 177);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Admin";
-            this.button3.UseVisualStyleBackColor = true;
+            this.logAsAdminButton.Location = new System.Drawing.Point(158, 177);
+            this.logAsAdminButton.Name = "logAsAdminButton";
+            this.logAsAdminButton.Size = new System.Drawing.Size(75, 23);
+            this.logAsAdminButton.TabIndex = 2;
+            this.logAsAdminButton.Text = "Admin";
+            this.logAsAdminButton.UseVisualStyleBackColor = true;
+            this.logAsAdminButton.Click += new System.EventHandler(this.logAsAdminButton_Click);
             // 
             // button2
             // 
@@ -213,7 +214,7 @@
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Panel popupPanel;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button logAsAdminButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button logAsRunnerButton;
         private System.Windows.Forms.Label label1;

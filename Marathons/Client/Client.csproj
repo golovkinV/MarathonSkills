@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministratorMenu\AdministratorMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministratorMenu\AdministratorMenuForm.Designer.cs">
+      <DependentUpon>AdministratorMenuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Authorization\AuthorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,11 @@
       <DependentUpon>CheckRunnerCompetedForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\AdminService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\RunnerService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -114,6 +125,9 @@
     <Compile Include="RunnerMenu\RunnerMenuForm.Designer.cs">
       <DependentUpon>RunnerMenuForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdministratorMenu\AdministratorMenuForm.resx">
+      <DependentUpon>AdministratorMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Authorization\AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +173,40 @@
     <None Include="Connected Services\AdminService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\RunnerService\Client.RunnerService.Charity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RunnerService\Client.RunnerService.RaceInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RunnerService\Client.RunnerService.Sponsor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RunnerService\RunnerService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RunnerService\service.wsdl" />
+    <None Include="Connected Services\RunnerService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RunnerService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\Client.UserService.Charity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserService\Client.UserService.Country.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserService\Client.UserService.Event.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserService\Client.UserService.KitOption.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\UserService\Client.UserService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -190,6 +238,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\AdminService\" />
+    <WCFMetadataStorage Include="Connected Services\RunnerService\" />
     <WCFMetadataStorage Include="Connected Services\UserService\" />
   </ItemGroup>
   <ItemGroup>
@@ -216,9 +265,20 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Connected Services\RunnerService\configuration91.svcinfo" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1828665.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RunnerService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RunnerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
