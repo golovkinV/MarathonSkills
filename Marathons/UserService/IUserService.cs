@@ -20,6 +20,19 @@ namespace UserService
         [OperationContract]
         void RegisterAsRunner(string email, string password, string firstName, string lastName, 
             string gender, string dateOfBirth, string countryCode);
+
+        [OperationContract]
+        void RegisterForEvent(string email, List<string> eventIds,
+            string kitOptionId, int charityId, double registrationCost);
+
+        [OperationContract]
+        List<Event> GetEvents();
+
+        [OperationContract]
+        List<KitOption> GetKitOptions();
+
+        [OperationContract]
+        List<Charity> GetCharities();
     }
 
     [DataContract]
@@ -110,6 +123,62 @@ namespace UserService
                 default:
                     return "";
             }
+        }
+    }
+
+    [DataContract]
+    public class Event 
+    {
+        [DataMember]
+        public string id;
+
+        [DataMember]
+        public string name;
+
+        [DataMember]
+        public double cost;
+
+        public Event(string id, string name, string cost) 
+        {
+            this.id = id;
+            this.name = name;
+            this.cost = Convert.ToDouble(cost);
+        }
+    }
+
+    [DataContract]
+    public class KitOption
+    {
+        [DataMember]
+        public string id;
+
+        [DataMember]
+        public string name;
+
+        [DataMember]
+        public double cost;
+
+        public KitOption(string id, string name, string cost)
+        {
+            this.id = id;
+            this.name = name;
+            this.cost = Convert.ToDouble(cost);
+        }
+    }
+
+    [DataContract]
+    public class Charity
+    {
+        [DataMember]
+        public int id;
+
+        [DataMember]
+        public string name;
+
+        public Charity(string id, string name) 
+        {
+            this.id = Convert.ToInt32(id);
+            this.name = name;
         }
     }
 }

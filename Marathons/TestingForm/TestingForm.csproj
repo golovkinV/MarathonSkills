@@ -94,12 +94,24 @@
     <None Include="Connected Services\AdminService\TestingForm.AdminService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\UserService\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\UserService\service.wsdl" />
     <None Include="Connected Services\UserService\service.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\UserService\service1.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\TestingForm.UserService.Charity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserService\TestingForm.UserService.Event.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserService\TestingForm.UserService.KitOption.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UserService\TestingForm.UserService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>

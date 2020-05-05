@@ -5,6 +5,7 @@
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/UserService" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IUserService_Login_InputMessage">
@@ -25,6 +26,30 @@
   <wsdl:message name="IUserService_RegisterAsRunner_OutputMessage">
     <wsdl:part name="parameters" element="tns:RegisterAsRunnerResponse" />
   </wsdl:message>
+  <wsdl:message name="IUserService_RegisterForEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterForEvent" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_RegisterForEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterForEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvents" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetKitOptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKitOptions" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetKitOptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKitOptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetCharities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCharities" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetCharities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCharitiesResponse" />
+  </wsdl:message>
   <wsdl:portType name="IUserService">
     <wsdl:operation name="Login">
       <wsdl:input wsaw:Action="http://tempuri.org/IUserService/Login" message="tns:IUserService_Login_InputMessage" />
@@ -37,6 +62,22 @@
     <wsdl:operation name="RegisterAsRunner">
       <wsdl:input wsaw:Action="http://tempuri.org/IUserService/RegisterAsRunner" message="tns:IUserService_RegisterAsRunner_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUserService/RegisterAsRunnerResponse" message="tns:IUserService_RegisterAsRunner_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterForEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/RegisterForEvent" message="tns:IUserService_RegisterForEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/RegisterForEventResponse" message="tns:IUserService_RegisterForEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetEvents" message="tns:IUserService_GetEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetEventsResponse" message="tns:IUserService_GetEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKitOptions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetKitOptions" message="tns:IUserService_GetKitOptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetKitOptionsResponse" message="tns:IUserService_GetKitOptions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCharities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetCharities" message="tns:IUserService_GetCharities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetCharitiesResponse" message="tns:IUserService_GetCharities_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IUserService" type="tns:IUserService">
@@ -61,6 +102,42 @@
     </wsdl:operation>
     <wsdl:operation name="RegisterAsRunner">
       <soap:operation soapAction="http://tempuri.org/IUserService/RegisterAsRunner" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterForEvent">
+      <soap:operation soapAction="http://tempuri.org/IUserService/RegisterForEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvents">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKitOptions">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetKitOptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCharities">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetCharities" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

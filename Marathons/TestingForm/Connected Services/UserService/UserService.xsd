@@ -28,4 +28,45 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="RunnerData" nillable="true" type="tns:RunnerData" />
+  <xs:complexType name="ArrayOfEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Event" nillable="true" type="tns:Event" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEvent" nillable="true" type="tns:ArrayOfEvent" />
+  <xs:complexType name="Event">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cost" type="xs:double" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Event" nillable="true" type="tns:Event" />
+  <xs:complexType name="ArrayOfKitOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KitOption" nillable="true" type="tns:KitOption" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKitOption" nillable="true" type="tns:ArrayOfKitOption" />
+  <xs:complexType name="KitOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cost" type="xs:double" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KitOption" nillable="true" type="tns:KitOption" />
+  <xs:complexType name="ArrayOfCharity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Charity" nillable="true" type="tns:Charity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCharity" nillable="true" type="tns:ArrayOfCharity" />
+  <xs:complexType name="Charity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Charity" nillable="true" type="tns:Charity" />
 </xs:schema>

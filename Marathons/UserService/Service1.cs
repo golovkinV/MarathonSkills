@@ -30,16 +30,7 @@ namespace UserService
 
             if (role.roleId == "R")
             {
-                var runnerReader = Reader.GetTableReader(UserRequest.RunnerData(email));
-                runnerReader.Read();
-                var runner = new RunnerData(
-                    runnerReader["RunnerId"].ToString(),
-                    runnerReader["Gender"].ToString(),
-                    runnerReader["Date"].ToString(),
-                    runnerReader["CountryCode"].ToString(),
-                    runnerReader["CountryName"].ToString()
-                );
-                user.runnerData = runner;
+                user.runnerData = GetRunnerData(email);
             }
 
           
@@ -61,6 +52,7 @@ namespace UserService
                     cmdRunner.CommandType = CommandType.Text;
                     var runner = user.runnerData;
                     cmdRunner.CommandText = UserRequest.UpdateRunnerData(runner, user.email);
+                    cmdRunner.Parameters.AddWithValue("@DateOfBirth", Convert.ToDateTime(runner.dateOfBirth));
                     cmdRunner.ExecuteNonQuery();
                 }
             }
@@ -79,9 +71,98 @@ namespace UserService
 
                 var cmdRunner = con.CreateCommand();
                 cmdRunner.CommandType = CommandType.Text;
-                cmdRunner.CommandText = UserRequest.RegisterRunner(email, gender, dateOfBirth, countryCode);
-                cmd.ExecuteNonQuery();
+                cmdRunner.CommandText = UserRequest.RegisterRunner(email, gender, countryCode);
+                cmdRunner.Parameters.AddWithValue("@DateOfBirth", Convert.ToDateTime(dateOfBirth));
+                cmdRunner.ExecuteNonQuery();
             }
+        }
+
+        public void RegisterForEvent(string email, List<string> eventIds, 
+            string kitOptionId, int charityId, double registrationCost)
+        {
+            var runnerData = GetRunnerData(email);
+
+            using (SqlConnection con = new SqlConnection(Configuration.someeServer))
+            {
+                con.Open();
+                var cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = UserRequest.Registration(runnerData.id, kitOptionId, registrationCost, charityId);
+                cmd.Parameters.AddWithValue("@Today", DateTime.Now);
+                cmd.ExecuteNonQuery();
+
+                var reader = Reader.GetTableReader(UserRequest.GetLastRegistrationId(runnerData.id));
+                reader.Read();
+                var registrationId = Convert.ToInt32(reader["RegistrationId"].ToString());
+
+                eventIds.ForEach(eventId =>
+                {
+                    var registEvent = con.CreateCommand();
+                    registEvent.CommandType = CommandType.Text;
+                    registEvent.CommandText = UserRequest.RegistrationEvent(registrationId, eventId);
+                    registEvent.ExecuteNonQuery();
+                });
+            }
+        }
+
+        private RunnerData GetRunnerData(string email) {
+            var runnerReader = Reader.GetTableReader(UserRequest.RunnerData(email));
+            runnerReader.Read();
+            var runner = new RunnerData(
+                runnerReader["RunnerId"].ToString(),
+                runnerReader["Gender"].ToString(),
+                runnerReader["Date"].ToString(),
+                runnerReader["CountryCode"].ToString(),
+                runnerReader["CountryName"].ToString()
+            );
+            return runner;
+        }
+
+        public List<Event> GetEvents()
+        {
+            var reader = Reader.GetTableReader(UserRequest.Events());
+            var events = new List<Event>();
+            while (reader.Read())
+            {
+                var localEvent = new Event(
+                        reader["EventId"].ToString(),
+                        reader["EventName"].ToString(),
+                        reader["Cost"].ToString()
+                    );
+                events.Add(localEvent);
+            }
+            return events;
+        }
+
+        public List<KitOption> GetKitOptions()
+        {
+            var reader = Reader.GetTableReader(UserRequest.KitOptions());
+            var kitOptions = new List<KitOption>();
+            while (reader.Read())
+            {
+                var kitOption = new KitOption(
+                        reader["RaceKitOptionId"].ToString(),
+                        reader["RaceKitOption"].ToString(),
+                        reader["Cost"].ToString()
+                    );
+                kitOptions.Add(kitOption);
+            }
+            return kitOptions;
+        }
+
+        public List<Charity> GetCharities()
+        {
+            var reader = Reader.GetTableReader(UserRequest.Charities());
+            var charities = new List<Charity>();
+            while (reader.Read())
+            {
+                var charity = new Charity(
+                    reader["CharityId"].ToString(),
+                    reader["CharityName"].ToString()
+                );
+                charities.Add(charity);
+            }
+            return charities;
         }
     }
 }
