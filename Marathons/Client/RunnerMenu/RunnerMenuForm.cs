@@ -29,5 +29,27 @@ namespace Client.RunnerMenu
             Hide();
             runnerMenuForm.Show();
         }
+
+        private void closePopupButton_Click(object sender, EventArgs e)
+        {
+            popupPanel.Visible = false;
+        }
+
+        private void contactInfoButton_Click(object sender, EventArgs e)
+        {
+            popupPanel.Visible = true;
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Form mainForm = new MainForm.MainForm();
+            Hide();
+            mainForm.Show();
+        }
+
+        private void sponsorshipButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

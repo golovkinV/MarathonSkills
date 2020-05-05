@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/RunnerService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRunnerService_GetSponsorship_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSponsorship" />
+  </wsdl:message>
+  <wsdl:message name="IRunnerService_GetSponsorship_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSponsorshipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRunnerService_GetCharity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCharity" />
+  </wsdl:message>
+  <wsdl:message name="IRunnerService_GetCharity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCharityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRunnerService_GetRaces_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRaces" />
+  </wsdl:message>
+  <wsdl:message name="IRunnerService_GetRaces_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRacesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRunnerService">
+    <wsdl:operation name="GetSponsorship">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRunnerService/GetSponsorship" message="tns:IRunnerService_GetSponsorship_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRunnerService/GetSponsorshipResponse" message="tns:IRunnerService_GetSponsorship_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCharity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRunnerService/GetCharity" message="tns:IRunnerService_GetCharity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRunnerService/GetCharityResponse" message="tns:IRunnerService_GetCharity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRaces">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRunnerService/GetRaces" message="tns:IRunnerService_GetRaces_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRunnerService/GetRacesResponse" message="tns:IRunnerService_GetRaces_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IRunnerService" type="tns:IRunnerService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSponsorship">
+      <soap:operation soapAction="http://tempuri.org/IRunnerService/GetSponsorship" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCharity">
+      <soap:operation soapAction="http://tempuri.org/IRunnerService/GetCharity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRaces">
+      <soap:operation soapAction="http://tempuri.org/IRunnerService/GetRaces" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IRunnerService" binding="tns:BasicHttpBinding_IRunnerService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/RunnerService/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

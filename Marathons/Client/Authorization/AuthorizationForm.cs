@@ -71,5 +71,13 @@ namespace Client
             Hide();
             runnerMenuForm.Show();
         }
+
+        private void logAsAdminButton_Click(object sender, EventArgs e)
+        {
+            Form adminMenuForm = new AdministratorMenu.AdministratorMenuForm(user);
+            adminMenuForm.Owner = this;
+            Hide();
+            adminMenuForm.Show();
+        }
     }
 }
