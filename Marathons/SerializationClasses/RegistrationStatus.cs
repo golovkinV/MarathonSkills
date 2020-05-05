@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
+
 namespace SerializationClasses
 {
     [DataContract]
-    public class Country
+    public class RegistrationStatus
     {
         [DataMember]
-        public string code;
+        public int id;
 
         [DataMember]
         public string name;
 
-        public Country(string code, string name)
+        public RegistrationStatus(string id, string name)
         {
-            this.code = code;
+            this.id = Convert.ToInt32(id);
             this.name = name;
         }
     }

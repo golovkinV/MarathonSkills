@@ -9,25 +9,39 @@ using SerializationClasses;
 
 namespace CoordinatorService
 {
-    // ПРИМЕЧАНИЕ. Команду "Переименовать" в меню "Рефакторинг" можно использовать для одновременного изменения имени класса "Service1" в коде и файле конфигурации.
     public class Service1 : ICoordinatorService
     {
-        public string GetData(int value)
+        public List<User> GetAllRunners()
         {
-            return string.Format("You entered: {0}", value);
-        }
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
+            var reader = Reader.GetTableReader(CoordinatorRequest.Runners());
+            var users = new List<User>();
+            while (reader.Read())
             {
-                throw new ArgumentNullException("composite");
+                var role = new Role(reader["RoleId"].ToString());
+                var user = new User(
+                        reader["Email"].ToString(),
+                        reader["Password"].ToString(),
+                        reader["FirstName"].ToString(),
+                        reader["LastName"].ToString(),
+                        role
+                    );
+                user.registrationStatus = new RegistrationStatus(
+                    reader["RegistrationStatusId"].ToString(),
+                    reader["RegistrationStatus"].ToString()
+                );
+                var country = new Country(
+                    reader["CountryCode"].ToString(),
+                    reader["CountryName"].ToString()
+                );
+                user.runnerData = new RunnerData(
+                    reader["RunnerId"].ToString(),
+                    reader["Gender"].ToString(),
+                    reader["Date"].ToString(),
+                    country
+                );
+                users.Add(user);
             }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            return users;
         }
     }
 }

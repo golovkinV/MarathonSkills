@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SerializationClasses
 {
@@ -28,6 +24,8 @@ namespace SerializationClasses
         [DataMember]
         public RunnerData runnerData = null;
 
+        [DataMember]
+        public RegistrationStatus registrationStatus = null;
 
         public User(string email, string password,
             string firstName, string lastName, Role role)

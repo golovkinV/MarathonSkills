@@ -119,5 +119,12 @@ namespace TestingForm
             var runner = client.GetRunners().First(x => x.lastName == "Tea");
             client.SponsorRunner("Tea Jr.", runner, 50);
         }
+
+        private async void button12_Click(object sender, EventArgs e)
+        {
+            var client = new CoordinatorService.CoordinatorServiceClient();
+            var keks = await client.GetAllRunnersAsync();
+            var lol = 0;
+        }
     }
 }
