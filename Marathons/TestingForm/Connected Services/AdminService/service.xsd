@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://schemas.datacontract.org/2004/07/AdminService" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/SerializationClasses" />
   <xs:element name="GetAllCharity">
     <xs:complexType>
       <xs:sequence />
@@ -9,14 +9,14 @@
   <xs:element name="GetAllCharityResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AdminService" minOccurs="0" name="GetAllCharityResult" nillable="true" type="q1:ArrayOfCharity" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SerializationClasses" minOccurs="0" name="GetAllCharityResult" nillable="true" type="q1:ArrayOfCharity" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="EditCharity">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AdminService" minOccurs="0" name="charity" nillable="true" type="q2:Charity" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SerializationClasses" minOccurs="0" name="charity" nillable="true" type="q2:Charity" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -42,7 +42,7 @@
   <xs:element name="AddVolunteers">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/AdminService" minOccurs="0" name="volunteers" nillable="true" type="q3:ArrayOfVolunteer" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SerializationClasses" minOccurs="0" name="volunteers" nillable="true" type="q3:ArrayOfVolunteer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -59,14 +59,14 @@
   <xs:element name="GetAllUserResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/AdminService" minOccurs="0" name="GetAllUserResult" nillable="true" type="q4:ArrayOfUser" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SerializationClasses" minOccurs="0" name="GetAllUserResult" nillable="true" type="q4:ArrayOfUser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="EditUser">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/AdminService" minOccurs="0" name="user" nillable="true" type="q5:User" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SerializationClasses" minOccurs="0" name="user" nillable="true" type="q5:User" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

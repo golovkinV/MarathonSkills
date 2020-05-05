@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SerializationClasses;
 
 namespace UserService
 {
@@ -53,7 +49,7 @@ namespace UserService
 
         public static string Charities()
         {
-            return "SELECT CharityId, CharityName FROM [Charity]";
+            return "SELECT * FROM [Charity]";
         }
 
         public static string Registration(int runnerId, string kitOptionId, double cost, int charityId)

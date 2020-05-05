@@ -26,7 +26,8 @@ namespace TestingForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            //var client = new UserService.UserServiceClient();
+            //var kek = client.GetClass1();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -103,6 +104,20 @@ namespace TestingForm
             list.Add("15_5FM");
             list.Add("15_5FR");
             await client.RegisterForEventAsync("test@yandex.ru", list.ToArray(), "A", 13, 20);
+        }
+
+        private async void button10_Click(object sender, EventArgs e)
+        {
+            var client = new SponsorService.SponsorServiceClient();
+            var keks = await client.GetRunnersAsync();
+            var lol = 0;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            var client = new SponsorService.SponsorServiceClient();
+            var runner = client.GetRunners().First(x => x.lastName == "Tea");
+            client.SponsorRunner("Tea Jr.", runner, 50);
         }
     }
 }

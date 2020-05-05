@@ -57,6 +57,10 @@
       <Project>{0d5ba6dc-7cbd-4b58-9f99-78db4e4d266b}</Project>
       <Name>Marathons</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SerializationClasses\SerializationClasses.csproj">
+      <Project>{5e11794c-a095-468d-a5d8-784928ba9fcb}</Project>
+      <Name>SerializationClasses</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SerializationClasses;
 
 namespace RunnerService
 {
@@ -20,7 +16,7 @@ namespace RunnerService
 
         public static string Races(int runnerId) {
             return $"SELECT Runner.Gender, Runner.DateOfBirth, Country.CountryName, Marathon.YearHeld, EventType.EventTypeName, RegistrationEvent.RaceTime " +
-                $"FROM(Runner inner join Registration on Runner.RunnerId = Registration.RunnerId " +
+                $"FROM(Runner INNER JOIN Registration ON Runner.RunnerId = Registration.RunnerId " +
                 $"INNER JOIN RegistrationEvent ON RegistrationEvent.RegistrationId = Registration.RegistrationId " +
                 $"INNER JOIN Event ON RegistrationEvent.EventId = Event.EventId " +
                 $"INNER JOIN EventType ON Event.EventTypeId = EventType.EventTypeId " +
