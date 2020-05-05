@@ -28,5 +28,17 @@ namespace Client.RegsterAsRunner
         {
             Application.Exit();
         }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            Form registerForEvent = new RegisterForEvent.RegisterForEvent();
+            Hide();
+            registerForEvent.Show();
+        }
+
+        private void RegisterAsRunnerForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

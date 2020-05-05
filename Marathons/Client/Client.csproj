@@ -66,12 +66,23 @@
     <Compile Include="CheckRunnerCompeted\CheckRunnerCompetedForm.Designer.cs">
       <DependentUpon>CheckRunnerCompetedForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\AdminService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\UserService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Constants.cs" />
+    <Compile Include="EditRunnerProfile\EditRunnerProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRunnerProfile\EditRunnerProfileForm.Designer.cs">
+      <DependentUpon>EditRunnerProfileForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,11 +91,28 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterForEvent\RegisterForEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForEvent\RegisterForEvent.Designer.cs">
+      <DependentUpon>RegisterForEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegsterAsRunner\RegisterAsRunnerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegsterAsRunner\RegisterAsRunnerForm.Designer.cs">
       <DependentUpon>RegisterAsRunnerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RunnerMenu\RunnerMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RunnerMenu\RunnerMenuForm.Designer.cs">
+      <DependentUpon>RunnerMenuForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Authorization\AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
@@ -95,21 +123,42 @@
     <EmbeddedResource Include="CheckRunnerCompeted\CheckRunnerCompetedForm.resx">
       <DependentUpon>CheckRunnerCompetedForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditRunnerProfile\EditRunnerProfileForm.resx">
+      <DependentUpon>EditRunnerProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="RegisterForEvent\RegisterForEvent.resx">
+      <DependentUpon>RegisterForEvent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegsterAsRunner\RegisterAsRunnerForm.resx">
       <DependentUpon>RegisterAsRunnerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RunnerMenu\RunnerMenuForm.resx">
+      <DependentUpon>RunnerMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\AdminService\AdminService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminService\Client.AdminService.Charity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminService\Client.AdminService.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminService\service.wsdl" />
+    <None Include="Connected Services\AdminService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\UserService\Client.UserService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -140,6 +189,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AdminService\" />
     <WCFMetadataStorage Include="Connected Services\UserService\" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +203,22 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AdminService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AdminService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AdminService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\1828665.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
