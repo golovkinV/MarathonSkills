@@ -48,6 +48,8 @@ namespace Client.RegsterAsRunner
             this.genderComboBox = new System.Windows.Forms.ComboBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.countryComboBox = new System.Windows.Forms.ComboBox();
+            this.registerButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.footerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +60,11 @@ namespace Client.RegsterAsRunner
             // 
             // footerPanel
             // 
-            this.footerPanel.Location = new System.Drawing.Point(0, 341);
+            this.footerPanel.Location = new System.Drawing.Point(0, 384);
+            // 
+            // timerLabel
+            // 
+            this.timerLabel.Location = new System.Drawing.Point(213, 7);
             // 
             // timer
             // 
@@ -224,19 +230,39 @@ namespace Client.RegsterAsRunner
             // 
             this.countryComboBox.FormattingEnabled = true;
             this.countryComboBox.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            "Uganda"});
             this.countryComboBox.Location = new System.Drawing.Point(472, 226);
             this.countryComboBox.Name = "countryComboBox";
             this.countryComboBox.Size = new System.Drawing.Size(121, 21);
             this.countryComboBox.TabIndex = 25;
+            // 
+            // registerButton
+            // 
+            this.registerButton.Location = new System.Drawing.Point(235, 344);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(75, 23);
+            this.registerButton.TabIndex = 26;
+            this.registerButton.Text = "Register";
+            this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(354, 344);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.TabIndex = 27;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
             // 
             // RegisterAsRunnerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(670, 370);
+            this.ClientSize = new System.Drawing.Size(670, 413);
+            this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.registerButton);
             this.Controls.Add(this.countryComboBox);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.genderComboBox);
@@ -258,6 +284,7 @@ namespace Client.RegsterAsRunner
             this.Name = "RegisterAsRunnerForm";
             this.Text = "Marathon Skills 2015- Register as Runner";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegisterAsRunnerForm_FormClosed);
+            this.Load += new System.EventHandler(this.RegisterAsRunnerForm_Load);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.additionalInfoLabel, 0);
             this.Controls.SetChildIndex(this.emailTextBox, 0);
@@ -278,6 +305,8 @@ namespace Client.RegsterAsRunner
             this.Controls.SetChildIndex(this.genderComboBox, 0);
             this.Controls.SetChildIndex(this.dateTimePicker, 0);
             this.Controls.SetChildIndex(this.countryComboBox, 0);
+            this.Controls.SetChildIndex(this.registerButton, 0);
+            this.Controls.SetChildIndex(this.cancelButton, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.footerPanel.ResumeLayout(false);
@@ -306,5 +335,7 @@ namespace Client.RegsterAsRunner
         private ComboBox genderComboBox;
         private DateTimePicker dateTimePicker;
         private ComboBox countryComboBox;
+        private Button registerButton;
+        private Button cancelButton;
     }
 }
