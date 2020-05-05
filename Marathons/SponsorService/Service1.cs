@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Marathons;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -10,22 +11,23 @@ namespace SponsorService
     // ПРИМЕЧАНИЕ. Команду "Переименовать" в меню "Рефакторинг" можно использовать для одновременного изменения имени класса "Service1" в коде и файле конфигурации.
     public class Service1 : ISponsorService
     {
-        public string GetData(int value)
+        public List<Runner> GetRunners()
         {
-            return string.Format("You entered: {0}", value);
-        }
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
+            var reader = Reader.GetTableReader(SponsorRequest.Runners());
+            var runners = new List<Runner>();
+            while (reader.Read())
             {
-                throw new ArgumentNullException("composite");
+                var runner = new Runner(
+                        reader["RegistrationId"].ToString(),
+                        reader["RunnerId"].ToString(),
+                        reader["FirstName"].ToString(),
+                        reader["LastName"].ToString(),
+                        reader["CountryName"].ToString(),
+                        reader["SponsorshipTarget"].ToString()
+                    );
+                runners.Add(runner);
             }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            return runners;
         }
     }
 }

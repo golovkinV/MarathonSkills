@@ -104,5 +104,12 @@ namespace TestingForm
             list.Add("15_5FR");
             await client.RegisterForEventAsync("test@yandex.ru", list.ToArray(), "A", 13, 20);
         }
+
+        private async void button10_Click(object sender, EventArgs e)
+        {
+            var client = new SponsorService.SponsorServiceClient();
+            var keks = await client.GetRunnersAsync();
+            var lol = 0;
+        }
     }
 }

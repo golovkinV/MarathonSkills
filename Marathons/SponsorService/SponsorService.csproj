@@ -47,9 +47,16 @@
     <Compile Include="ISponsorService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service1.cs" />
+    <Compile Include="SponsorRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Marathons\Marathons.csproj">
+      <Project>{0d5ba6dc-7cbd-4b58-9f99-78db4e4d266b}</Project>
+      <Name>Marathons</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

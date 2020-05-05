@@ -12,7 +12,7 @@ namespace SponsorService
     public interface ISponsorService
     {
         [OperationContract]
-        string GetData(int value);
+        List<Runner> GetRunners();
 
     }
 
@@ -34,13 +34,18 @@ namespace SponsorService
         [DataMember]
         public string country;
 
-        public Runner(string id, string registrationId, string firstName, string lastName, string country)
+        [DataMember]
+        public double sponsorshipTarget;
+
+        public Runner(string id, string registrationId, 
+            string firstName, string lastName, string country, string sponsorshipTarget)
         {
             this.id = Convert.ToInt32(id);
             this.registrationId = Convert.ToInt32(registrationId);
             this.firstName = firstName;
             this.lastName = lastName;
             this.country = country;
+            this.sponsorshipTarget = Convert.ToDouble(sponsorshipTarget);
         }
     }
 }
