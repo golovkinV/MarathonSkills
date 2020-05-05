@@ -49,6 +49,7 @@
             this.emailInputLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.footerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -101,7 +102,7 @@
             this.countryComboBox.FormattingEnabled = true;
             this.countryComboBox.Items.AddRange(new object[] {
             "Uganda"});
-            this.countryComboBox.Location = new System.Drawing.Point(172, 296);
+            this.countryComboBox.Location = new System.Drawing.Point(172, 298);
             this.countryComboBox.Name = "countryComboBox";
             this.countryComboBox.Size = new System.Drawing.Size(145, 21);
             this.countryComboBox.TabIndex = 45;
@@ -129,7 +130,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 10.25F);
-            this.label1.Location = new System.Drawing.Point(91, 297);
+            this.label1.Location = new System.Drawing.Point(91, 299);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 42;
@@ -270,11 +271,22 @@
             this.label10.Text = "Leave these filds blank if you do not want to change the password.\r\n\r\n";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(117, 341);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 51;
+            this.button1.Text = "test";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // EditRunnerProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.emailInputLabel);
@@ -323,6 +335,7 @@
             this.Controls.SetChildIndex(this.emailInputLabel, 0);
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.label10, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.footerPanel.ResumeLayout(false);
@@ -355,5 +368,6 @@
         private System.Windows.Forms.Label emailInputLabel;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button1;
     }
 }
