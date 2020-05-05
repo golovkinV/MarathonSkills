@@ -107,6 +107,9 @@
     <None Include="Connected Services\UserService\TestingForm.UserService.Charity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\UserService\TestingForm.UserService.Country.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\UserService\TestingForm.UserService.Event.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
