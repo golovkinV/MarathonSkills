@@ -20,10 +20,11 @@
   <xs:element name="Role" nillable="true" type="tns:Role" />
   <xs:complexType name="RunnerData">
     <xs:sequence>
-      <xs:element minOccurs="0" name="birthday" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="countryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dateOfBirth" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="RunnerData" nillable="true" type="tns:RunnerData" />

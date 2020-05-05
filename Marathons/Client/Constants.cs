@@ -11,7 +11,7 @@ namespace Client
         /// <summary>
         /// Константа даты начала марафона
         /// </summary>
-        public static DateTime startMarathonDate = new DateTime(2020, 4, 30, 14, 00, 00);
+        public static DateTime startMarathonDate = new DateTime(2020, 6, 30, 14, 00, 00);
 
 
         /// <summary>

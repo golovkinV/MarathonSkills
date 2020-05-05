@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Client.UserService;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,16 +18,19 @@ namespace Client
             InitializeComponent();
         }
 
+        User user;
+
         private void loginButton_Click(object sender, EventArgs e)
         {
             var login = loginTextBox.Text;
             var password = passwordTextBox.Text;
-            var client = new UserService.Service1Client();
+            var client = new UserService.UserServiceClient();
             
             try
             {
-                var user = client.Login(login, password);
+                user = client.Login(login, password);
                 passwordTextBox.Text = user.password;
+                popupPanel.Visible = true;
             }
             catch
             {
@@ -53,6 +57,19 @@ namespace Client
             Form mainForm = new MainForm.MainForm();
             Hide();
             mainForm.Show();
+        }
+
+        private void closePopupButton_Click(object sender, EventArgs e)
+        {
+            popupPanel.Visible = false;
+        }
+
+        private void logAsRunnerButton_Click(object sender, EventArgs e)
+        {
+            Form runnerMenuForm = new RunnerMenu.RunnerMenuForm(user);
+            runnerMenuForm.Owner = this;
+            Hide();
+            runnerMenuForm.Show();
         }
     }
 }
