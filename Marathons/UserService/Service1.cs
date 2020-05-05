@@ -1,12 +1,9 @@
 ﻿using System;
 using Marathons;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
 using System.Data.SqlClient;
 using System.Data;
+using SerializationClasses;
 
 namespace UserService
 {
@@ -160,9 +157,11 @@ namespace UserService
             while (reader.Read())
             {
                 var charity = new Charity(
-                    reader["CharityId"].ToString(),
-                    reader["CharityName"].ToString()
-                );
+                        reader["CharityId"].ToString(),
+                        reader["CharityName"].ToString(),
+                        reader["CharityDescription"].ToString(),
+                        reader["CharityLogo"].ToString()
+                    );
                 charities.Add(charity);
             }
             return charities;

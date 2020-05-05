@@ -15,7 +15,7 @@ namespace TestingForm.UserService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/UserService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -140,7 +140,7 @@ namespace TestingForm.UserService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Role", Namespace="http://schemas.datacontract.org/2004/07/UserService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Role", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class Role : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -201,7 +201,7 @@ namespace TestingForm.UserService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RunnerData", Namespace="http://schemas.datacontract.org/2004/07/UserService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RunnerData", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class RunnerData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -294,7 +294,7 @@ namespace TestingForm.UserService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Country", Namespace="http://schemas.datacontract.org/2004/07/UserService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Country", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class Country : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -355,7 +355,7 @@ namespace TestingForm.UserService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Event", Namespace="http://schemas.datacontract.org/2004/07/UserService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Event", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class Event : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -432,7 +432,7 @@ namespace TestingForm.UserService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="KitOption", Namespace="http://schemas.datacontract.org/2004/07/UserService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="KitOption", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class KitOption : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -509,7 +509,7 @@ namespace TestingForm.UserService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Charity", Namespace="http://schemas.datacontract.org/2004/07/UserService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Charity", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class Charity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -517,7 +517,13 @@ namespace TestingForm.UserService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string descField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string logoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string nameField;
@@ -533,6 +539,19 @@ namespace TestingForm.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string desc {
+            get {
+                return this.descField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.descField, value) != true)) {
+                    this.descField = value;
+                    this.RaisePropertyChanged("desc");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int id {
             get {
                 return this.idField;
@@ -541,6 +560,19 @@ namespace TestingForm.UserService {
                 if ((this.idField.Equals(value) != true)) {
                     this.idField = value;
                     this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string logo {
+            get {
+                return this.logoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.logoField, value) != true)) {
+                    this.logoField = value;
+                    this.RaisePropertyChanged("logo");
                 }
             }
         }

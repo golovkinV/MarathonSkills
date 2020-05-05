@@ -15,12 +15,15 @@ namespace TestingForm.SponsorService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Runner", Namespace="http://schemas.datacontract.org/2004/07/SponsorService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Runner", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class Runner : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestingForm.SponsorService.Charity charityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string countryField;
@@ -47,6 +50,19 @@ namespace TestingForm.SponsorService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestingForm.SponsorService.Charity charity {
+            get {
+                return this.charityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.charityField, value) != true)) {
+                    this.charityField = value;
+                    this.RaisePropertyChanged("charity");
+                }
             }
         }
         
@@ -138,6 +154,99 @@ namespace TestingForm.SponsorService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Charity", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
+    [System.SerializableAttribute()]
+    public partial class Charity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string descField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string logoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string desc {
+            get {
+                return this.descField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.descField, value) != true)) {
+                    this.descField = value;
+                    this.RaisePropertyChanged("desc");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string logo {
+            get {
+                return this.logoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.logoField, value) != true)) {
+                    this.logoField = value;
+                    this.RaisePropertyChanged("logo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SponsorService.ISponsorService")]
     public interface ISponsorService {
@@ -147,6 +256,12 @@ namespace TestingForm.SponsorService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISponsorService/GetRunners", ReplyAction="http://tempuri.org/ISponsorService/GetRunnersResponse")]
         System.Threading.Tasks.Task<TestingForm.SponsorService.Runner[]> GetRunnersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISponsorService/SponsorRunner", ReplyAction="http://tempuri.org/ISponsorService/SponsorRunnerResponse")]
+        void SponsorRunner(string name, TestingForm.SponsorService.Runner runner, double amount);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISponsorService/SponsorRunner", ReplyAction="http://tempuri.org/ISponsorService/SponsorRunnerResponse")]
+        System.Threading.Tasks.Task SponsorRunnerAsync(string name, TestingForm.SponsorService.Runner runner, double amount);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -182,6 +297,14 @@ namespace TestingForm.SponsorService {
         
         public System.Threading.Tasks.Task<TestingForm.SponsorService.Runner[]> GetRunnersAsync() {
             return base.Channel.GetRunnersAsync();
+        }
+        
+        public void SponsorRunner(string name, TestingForm.SponsorService.Runner runner, double amount) {
+            base.Channel.SponsorRunner(name, runner, amount);
+        }
+        
+        public System.Threading.Tasks.Task SponsorRunnerAsync(string name, TestingForm.SponsorService.Runner runner, double amount) {
+            return base.Channel.SponsorRunnerAsync(name, runner, amount);
         }
     }
 }

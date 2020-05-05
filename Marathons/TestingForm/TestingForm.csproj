@@ -83,7 +83,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\AdminService\AdminService.xsd">
+    <None Include="Connected Services\AdminService\SerializationClasses.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\AdminService\service.wsdl" />
@@ -99,6 +99,9 @@
     <None Include="Connected Services\AdminService\TestingForm.AdminService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\SponsorService\SerializationClasses.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\SponsorService\service.wsdl" />
     <None Include="Connected Services\SponsorService\service.xsd">
       <SubType>Designer</SubType>
@@ -106,13 +109,13 @@
     <None Include="Connected Services\SponsorService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\SponsorService\SponsorService.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\SponsorService\TestingForm.SponsorService.Runner.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UserService\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\SerializationClasses.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\UserService\service.wsdl" />
@@ -136,9 +139,6 @@
     </None>
     <None Include="Connected Services\UserService\TestingForm.UserService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\UserService\UserService.xsd">
-      <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

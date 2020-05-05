@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using Marathons;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
+using SerializationClasses;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace SponsorService
 {
-    // ПРИМЕЧАНИЕ. Команду "Переименовать" в меню "Рефакторинг" можно использовать для одновременного изменения имени класса "Service1" в коде и файле конфигурации.
     public class Service1 : ISponsorService
     {
         public List<Runner> GetRunners()
@@ -17,17 +15,42 @@ namespace SponsorService
             var runners = new List<Runner>();
             while (reader.Read())
             {
+                var charity = new Charity(
+                    reader["CharityId"].ToString(),
+                    reader["CharityName"].ToString(),
+                    reader["CharityDescription"].ToString(),
+                    reader["CharityLogo"].ToString()
+                );
                 var runner = new Runner(
-                        reader["RegistrationId"].ToString(),
                         reader["RunnerId"].ToString(),
+                        reader["RegistrationId"].ToString(),
                         reader["FirstName"].ToString(),
                         reader["LastName"].ToString(),
                         reader["CountryName"].ToString(),
-                        reader["SponsorshipTarget"].ToString()
+                        reader["SponsorshipTarget"].ToString(),
+                        charity
                     );
                 runners.Add(runner);
             }
             return runners;
+        }
+
+        public void SponsorRunner(string name, Runner runner, double amount)
+        {
+            using (SqlConnection con = new SqlConnection(Configuration.someeServer))
+            {
+                con.Open();
+                var cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = SponsorRequest.Sponsor(name, runner, amount);
+                cmd.ExecuteNonQuery();
+
+                runner.sponsorshipTarget += amount;
+                var cmdUpdate = con.CreateCommand();
+                cmdUpdate.CommandType = CommandType.Text;
+                cmdUpdate.CommandText = SponsorRequest.UpdateSponsorshipTarget(runner);
+                cmdUpdate.ExecuteNonQuery();
+            }
         }
     }
 }
