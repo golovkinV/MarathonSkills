@@ -14,5 +14,14 @@ namespace InfoService
     {
         [OperationContract]
         List<RaceResult> GetRaces();
+
+        [OperationContract]
+        List<Charity> GetCharities();
+
+        [OperationContract]
+        List<Marathon> GetMarathons();
+
+        [OperationContract]
+        List<EventType> GetEventTypes();
     }
 }

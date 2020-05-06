@@ -136,5 +136,12 @@ namespace TestingForm
             runner.registrationStatus.id = 2;
             await client.EditUserAsync(runner);
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            var client = new InfoService.InfoServiceClient();
+            var keks = client.GetRaces();
+            var lol = 0;
+        }
     }
 }

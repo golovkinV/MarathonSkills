@@ -58,6 +58,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\InfoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\SponsorService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -123,6 +128,28 @@
     <None Include="Connected Services\CoordinatorService\TestingForm.CoordinatorService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\InfoService\SerializationClasses.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\InfoService\service.wsdl" />
+    <None Include="Connected Services\InfoService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\InfoService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\InfoService\TestingForm.InfoService.Charity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfoService\TestingForm.InfoService.EventType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfoService\TestingForm.InfoService.Marathon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\InfoService\TestingForm.InfoService.RaceResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\SponsorService\SerializationClasses.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -183,6 +210,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\AdminService\" />
     <WCFMetadataStorage Include="Connected Services\CoordinatorService\" />
+    <WCFMetadataStorage Include="Connected Services\InfoService\" />
     <WCFMetadataStorage Include="Connected Services\SponsorService\" />
     <WCFMetadataStorage Include="Connected Services\UserService\" />
   </ItemGroup>
@@ -230,6 +258,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\CoordinatorService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\InfoService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\InfoService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\InfoService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
