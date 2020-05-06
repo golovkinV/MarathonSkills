@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SerializationClasses
 {
@@ -28,6 +25,8 @@ namespace SerializationClasses
         [DataMember]
         public RunnerData runnerData = null;
 
+        [DataMember]
+        public RegistrationStatus registrationStatus = null;
 
         public User(string email, string password,
             string firstName, string lastName, Role role)
@@ -54,6 +53,18 @@ namespace SerializationClasses
 
         [DataMember]
         public Country country;
+
+        [DataMember]
+        public Charity charity = null;
+
+        [DataMember]
+        public KitOption kitOption = null;
+
+        [DataMember]
+        public List<Event> events = null;
+
+        [DataMember]
+        public double target;
 
         public RunnerData(string id, string gender, string dateOfBirth, Country country)
         {

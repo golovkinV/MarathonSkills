@@ -8,196 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestingForm.AdminService {
+namespace TestingForm.CoordinatorService {
     using System.Runtime.Serialization;
     using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Charity", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
-    [System.SerializableAttribute()]
-    public partial class Charity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string descField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string logoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string nameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string desc {
-            get {
-                return this.descField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.descField, value) != true)) {
-                    this.descField = value;
-                    this.RaisePropertyChanged("desc");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                if ((this.idField.Equals(value) != true)) {
-                    this.idField = value;
-                    this.RaisePropertyChanged("id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string logo {
-            get {
-                return this.logoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.logoField, value) != true)) {
-                    this.logoField = value;
-                    this.RaisePropertyChanged("logo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.nameField, value) != true)) {
-                    this.nameField = value;
-                    this.RaisePropertyChanged("name");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Volunteer", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
-    [System.SerializableAttribute()]
-    public partial class Volunteer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string countryCodeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string firstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string genderField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string lastNameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string countryCode {
-            get {
-                return this.countryCodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.countryCodeField, value) != true)) {
-                    this.countryCodeField = value;
-                    this.RaisePropertyChanged("countryCode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string firstName {
-            get {
-                return this.firstNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.firstNameField, value) != true)) {
-                    this.firstNameField = value;
-                    this.RaisePropertyChanged("firstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string gender {
-            get {
-                return this.genderField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.genderField, value) != true)) {
-                    this.genderField = value;
-                    this.RaisePropertyChanged("gender");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string lastName {
-            get {
-                return this.lastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.lastNameField, value) != true)) {
-                    this.lastNameField = value;
-                    this.RaisePropertyChanged("lastName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
@@ -221,13 +35,13 @@ namespace TestingForm.AdminService {
         private string passwordField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestingForm.AdminService.RegistrationStatus registrationStatusField;
+        private TestingForm.CoordinatorService.RegistrationStatus registrationStatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestingForm.AdminService.Role roleField;
+        private TestingForm.CoordinatorService.Role roleField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestingForm.AdminService.RunnerData runnerDataField;
+        private TestingForm.CoordinatorService.RunnerData runnerDataField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -292,7 +106,7 @@ namespace TestingForm.AdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestingForm.AdminService.RegistrationStatus registrationStatus {
+        public TestingForm.CoordinatorService.RegistrationStatus registrationStatus {
             get {
                 return this.registrationStatusField;
             }
@@ -305,7 +119,7 @@ namespace TestingForm.AdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestingForm.AdminService.Role role {
+        public TestingForm.CoordinatorService.Role role {
             get {
                 return this.roleField;
             }
@@ -318,7 +132,7 @@ namespace TestingForm.AdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestingForm.AdminService.RunnerData runnerData {
+        public TestingForm.CoordinatorService.RunnerData runnerData {
             get {
                 return this.runnerDataField;
             }
@@ -488,16 +302,16 @@ namespace TestingForm.AdminService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestingForm.AdminService.Charity charityField;
+        private TestingForm.CoordinatorService.Charity charityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestingForm.AdminService.Country countryField;
+        private TestingForm.CoordinatorService.Country countryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string dateOfBirthField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestingForm.AdminService.Event[] eventsField;
+        private TestingForm.CoordinatorService.Event[] eventsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string genderField;
@@ -506,7 +320,7 @@ namespace TestingForm.AdminService {
         private int idField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestingForm.AdminService.KitOption kitOptionField;
+        private TestingForm.CoordinatorService.KitOption kitOptionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private double targetField;
@@ -522,7 +336,7 @@ namespace TestingForm.AdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestingForm.AdminService.Charity charity {
+        public TestingForm.CoordinatorService.Charity charity {
             get {
                 return this.charityField;
             }
@@ -535,7 +349,7 @@ namespace TestingForm.AdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestingForm.AdminService.Country country {
+        public TestingForm.CoordinatorService.Country country {
             get {
                 return this.countryField;
             }
@@ -561,7 +375,7 @@ namespace TestingForm.AdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestingForm.AdminService.Event[] events {
+        public TestingForm.CoordinatorService.Event[] events {
             get {
                 return this.eventsField;
             }
@@ -600,7 +414,7 @@ namespace TestingForm.AdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestingForm.AdminService.KitOption kitOption {
+        public TestingForm.CoordinatorService.KitOption kitOption {
             get {
                 return this.kitOptionField;
             }
@@ -621,6 +435,99 @@ namespace TestingForm.AdminService {
                 if ((this.targetField.Equals(value) != true)) {
                     this.targetField = value;
                     this.RaisePropertyChanged("target");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Charity", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
+    [System.SerializableAttribute()]
+    public partial class Charity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string descField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string logoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string desc {
+            get {
+                return this.descField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.descField, value) != true)) {
+                    this.descField = value;
+                    this.RaisePropertyChanged("desc");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string logo {
+            get {
+                return this.logoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.logoField, value) != true)) {
+                    this.logoField = value;
+                    this.RaisePropertyChanged("logo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
                 }
             }
         }
@@ -851,133 +758,91 @@ namespace TestingForm.AdminService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AdminService.IAdminService")]
-    public interface IAdminService {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CoordinatorService.ICoordinatorService")]
+    public interface ICoordinatorService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllCharity", ReplyAction="http://tempuri.org/IAdminService/GetAllCharityResponse")]
-        TestingForm.AdminService.Charity[] GetAllCharity();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICoordinatorService/GetAllRunners", ReplyAction="http://tempuri.org/ICoordinatorService/GetAllRunnersResponse")]
+        TestingForm.CoordinatorService.User[] GetAllRunners();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllCharity", ReplyAction="http://tempuri.org/IAdminService/GetAllCharityResponse")]
-        System.Threading.Tasks.Task<TestingForm.AdminService.Charity[]> GetAllCharityAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICoordinatorService/GetAllRunners", ReplyAction="http://tempuri.org/ICoordinatorService/GetAllRunnersResponse")]
+        System.Threading.Tasks.Task<TestingForm.CoordinatorService.User[]> GetAllRunnersAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/EditCharity", ReplyAction="http://tempuri.org/IAdminService/EditCharityResponse")]
-        void EditCharity(TestingForm.AdminService.Charity charity);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICoordinatorService/EditUser", ReplyAction="http://tempuri.org/ICoordinatorService/EditUserResponse")]
+        void EditUser(TestingForm.CoordinatorService.User user);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/EditCharity", ReplyAction="http://tempuri.org/IAdminService/EditCharityResponse")]
-        System.Threading.Tasks.Task EditCharityAsync(TestingForm.AdminService.Charity charity);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICoordinatorService/EditUser", ReplyAction="http://tempuri.org/ICoordinatorService/EditUserResponse")]
+        System.Threading.Tasks.Task EditUserAsync(TestingForm.CoordinatorService.User user);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddCharity", ReplyAction="http://tempuri.org/IAdminService/AddCharityResponse")]
-        void AddCharity(string name, string desc, string logo);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICoordinatorService/GetCountries", ReplyAction="http://tempuri.org/ICoordinatorService/GetCountriesResponse")]
+        TestingForm.CoordinatorService.Country[] GetCountries();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddCharity", ReplyAction="http://tempuri.org/IAdminService/AddCharityResponse")]
-        System.Threading.Tasks.Task AddCharityAsync(string name, string desc, string logo);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICoordinatorService/GetCountries", ReplyAction="http://tempuri.org/ICoordinatorService/GetCountriesResponse")]
+        System.Threading.Tasks.Task<TestingForm.CoordinatorService.Country[]> GetCountriesAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddVolunteers", ReplyAction="http://tempuri.org/IAdminService/AddVolunteersResponse")]
-        void AddVolunteers(TestingForm.AdminService.Volunteer[] volunteers);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICoordinatorService/GetRegistrationStatuses", ReplyAction="http://tempuri.org/ICoordinatorService/GetRegistrationStatusesResponse")]
+        TestingForm.CoordinatorService.RegistrationStatus[] GetRegistrationStatuses();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddVolunteers", ReplyAction="http://tempuri.org/IAdminService/AddVolunteersResponse")]
-        System.Threading.Tasks.Task AddVolunteersAsync(TestingForm.AdminService.Volunteer[] volunteers);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllUser", ReplyAction="http://tempuri.org/IAdminService/GetAllUserResponse")]
-        TestingForm.AdminService.User[] GetAllUser();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllUser", ReplyAction="http://tempuri.org/IAdminService/GetAllUserResponse")]
-        System.Threading.Tasks.Task<TestingForm.AdminService.User[]> GetAllUserAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/EditUser", ReplyAction="http://tempuri.org/IAdminService/EditUserResponse")]
-        void EditUser(TestingForm.AdminService.User user);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/EditUser", ReplyAction="http://tempuri.org/IAdminService/EditUserResponse")]
-        System.Threading.Tasks.Task EditUserAsync(TestingForm.AdminService.User user);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddUser", ReplyAction="http://tempuri.org/IAdminService/AddUserResponse")]
-        void AddUser(string email, string password, string firstName, string lastName, string roleId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddUser", ReplyAction="http://tempuri.org/IAdminService/AddUserResponse")]
-        System.Threading.Tasks.Task AddUserAsync(string email, string password, string firstName, string lastName, string roleId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICoordinatorService/GetRegistrationStatuses", ReplyAction="http://tempuri.org/ICoordinatorService/GetRegistrationStatusesResponse")]
+        System.Threading.Tasks.Task<TestingForm.CoordinatorService.RegistrationStatus[]> GetRegistrationStatusesAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IAdminServiceChannel : TestingForm.AdminService.IAdminService, System.ServiceModel.IClientChannel {
+    public interface ICoordinatorServiceChannel : TestingForm.CoordinatorService.ICoordinatorService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AdminServiceClient : System.ServiceModel.ClientBase<TestingForm.AdminService.IAdminService>, TestingForm.AdminService.IAdminService {
+    public partial class CoordinatorServiceClient : System.ServiceModel.ClientBase<TestingForm.CoordinatorService.ICoordinatorService>, TestingForm.CoordinatorService.ICoordinatorService {
         
-        public AdminServiceClient() {
+        public CoordinatorServiceClient() {
         }
         
-        public AdminServiceClient(string endpointConfigurationName) : 
+        public CoordinatorServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public AdminServiceClient(string endpointConfigurationName, string remoteAddress) : 
+        public CoordinatorServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public AdminServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CoordinatorServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public AdminServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CoordinatorServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public TestingForm.AdminService.Charity[] GetAllCharity() {
-            return base.Channel.GetAllCharity();
+        public TestingForm.CoordinatorService.User[] GetAllRunners() {
+            return base.Channel.GetAllRunners();
         }
         
-        public System.Threading.Tasks.Task<TestingForm.AdminService.Charity[]> GetAllCharityAsync() {
-            return base.Channel.GetAllCharityAsync();
+        public System.Threading.Tasks.Task<TestingForm.CoordinatorService.User[]> GetAllRunnersAsync() {
+            return base.Channel.GetAllRunnersAsync();
         }
         
-        public void EditCharity(TestingForm.AdminService.Charity charity) {
-            base.Channel.EditCharity(charity);
-        }
-        
-        public System.Threading.Tasks.Task EditCharityAsync(TestingForm.AdminService.Charity charity) {
-            return base.Channel.EditCharityAsync(charity);
-        }
-        
-        public void AddCharity(string name, string desc, string logo) {
-            base.Channel.AddCharity(name, desc, logo);
-        }
-        
-        public System.Threading.Tasks.Task AddCharityAsync(string name, string desc, string logo) {
-            return base.Channel.AddCharityAsync(name, desc, logo);
-        }
-        
-        public void AddVolunteers(TestingForm.AdminService.Volunteer[] volunteers) {
-            base.Channel.AddVolunteers(volunteers);
-        }
-        
-        public System.Threading.Tasks.Task AddVolunteersAsync(TestingForm.AdminService.Volunteer[] volunteers) {
-            return base.Channel.AddVolunteersAsync(volunteers);
-        }
-        
-        public TestingForm.AdminService.User[] GetAllUser() {
-            return base.Channel.GetAllUser();
-        }
-        
-        public System.Threading.Tasks.Task<TestingForm.AdminService.User[]> GetAllUserAsync() {
-            return base.Channel.GetAllUserAsync();
-        }
-        
-        public void EditUser(TestingForm.AdminService.User user) {
+        public void EditUser(TestingForm.CoordinatorService.User user) {
             base.Channel.EditUser(user);
         }
         
-        public System.Threading.Tasks.Task EditUserAsync(TestingForm.AdminService.User user) {
+        public System.Threading.Tasks.Task EditUserAsync(TestingForm.CoordinatorService.User user) {
             return base.Channel.EditUserAsync(user);
         }
         
-        public void AddUser(string email, string password, string firstName, string lastName, string roleId) {
-            base.Channel.AddUser(email, password, firstName, lastName, roleId);
+        public TestingForm.CoordinatorService.Country[] GetCountries() {
+            return base.Channel.GetCountries();
         }
         
-        public System.Threading.Tasks.Task AddUserAsync(string email, string password, string firstName, string lastName, string roleId) {
-            return base.Channel.AddUserAsync(email, password, firstName, lastName, roleId);
+        public System.Threading.Tasks.Task<TestingForm.CoordinatorService.Country[]> GetCountriesAsync() {
+            return base.Channel.GetCountriesAsync();
+        }
+        
+        public TestingForm.CoordinatorService.RegistrationStatus[] GetRegistrationStatuses() {
+            return base.Channel.GetRegistrationStatuses();
+        }
+        
+        public System.Threading.Tasks.Task<TestingForm.CoordinatorService.RegistrationStatus[]> GetRegistrationStatusesAsync() {
+            return base.Channel.GetRegistrationStatusesAsync();
         }
     }
 }
