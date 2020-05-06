@@ -45,9 +45,12 @@
     <Compile Include="Charity.cs" />
     <Compile Include="Country.cs" />
     <Compile Include="Event.cs" />
+    <Compile Include="EventType.cs" />
     <Compile Include="KitOption.cs" />
+    <Compile Include="Marathon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RaceInfo.cs" />
+    <Compile Include="RaceResult.cs" />
     <Compile Include="RegistrationStatus.cs" />
     <Compile Include="Runner.cs" />
     <Compile Include="Sponsor.cs" />

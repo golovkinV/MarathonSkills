@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/SerializationClasses" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInfoService_GetRaces_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRaces" />
+  </wsdl:message>
+  <wsdl:message name="IInfoService_GetRaces_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRacesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInfoService_GetCharities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCharities" />
+  </wsdl:message>
+  <wsdl:message name="IInfoService_GetCharities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCharitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInfoService_GetMarathons_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarathons" />
+  </wsdl:message>
+  <wsdl:message name="IInfoService_GetMarathons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarathonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInfoService_GetEventTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventTypes" />
+  </wsdl:message>
+  <wsdl:message name="IInfoService_GetEventTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventTypesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IInfoService">
+    <wsdl:operation name="GetRaces">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInfoService/GetRaces" message="tns:IInfoService_GetRaces_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInfoService/GetRacesResponse" message="tns:IInfoService_GetRaces_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCharities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInfoService/GetCharities" message="tns:IInfoService_GetCharities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInfoService/GetCharitiesResponse" message="tns:IInfoService_GetCharities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMarathons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInfoService/GetMarathons" message="tns:IInfoService_GetMarathons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInfoService/GetMarathonsResponse" message="tns:IInfoService_GetMarathons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInfoService/GetEventTypes" message="tns:IInfoService_GetEventTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInfoService/GetEventTypesResponse" message="tns:IInfoService_GetEventTypes_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IInfoService" type="tns:IInfoService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRaces">
+      <soap:operation soapAction="http://tempuri.org/IInfoService/GetRaces" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCharities">
+      <soap:operation soapAction="http://tempuri.org/IInfoService/GetCharities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarathons">
+      <soap:operation soapAction="http://tempuri.org/IInfoService/GetMarathons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventTypes">
+      <soap:operation soapAction="http://tempuri.org/IInfoService/GetEventTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IInfoService" binding="tns:BasicHttpBinding_IInfoService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/InfoService/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
