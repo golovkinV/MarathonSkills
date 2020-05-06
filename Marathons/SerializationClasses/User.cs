@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace SerializationClasses
@@ -52,6 +53,18 @@ namespace SerializationClasses
 
         [DataMember]
         public Country country;
+
+        [DataMember]
+        public Charity charity = null;
+
+        [DataMember]
+        public KitOption kitOption = null;
+
+        [DataMember]
+        public List<Event> events = null;
+
+        [DataMember]
+        public double target;
 
         public RunnerData(string id, string gender, string dateOfBirth, Country country)
         {

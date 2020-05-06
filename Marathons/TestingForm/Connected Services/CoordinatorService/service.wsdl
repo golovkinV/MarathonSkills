@@ -13,16 +13,73 @@
   <wsdl:message name="ICoordinatorService_GetAllRunners_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllRunnersResponse" />
   </wsdl:message>
+  <wsdl:message name="ICoordinatorService_EditUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditUser" />
+  </wsdl:message>
+  <wsdl:message name="ICoordinatorService_EditUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICoordinatorService_GetCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountries" />
+  </wsdl:message>
+  <wsdl:message name="ICoordinatorService_GetCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICoordinatorService_GetRegistrationStatuses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegistrationStatuses" />
+  </wsdl:message>
+  <wsdl:message name="ICoordinatorService_GetRegistrationStatuses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegistrationStatusesResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICoordinatorService">
     <wsdl:operation name="GetAllRunners">
       <wsdl:input wsaw:Action="http://tempuri.org/ICoordinatorService/GetAllRunners" message="tns:ICoordinatorService_GetAllRunners_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICoordinatorService/GetAllRunnersResponse" message="tns:ICoordinatorService_GetAllRunners_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICoordinatorService/EditUser" message="tns:ICoordinatorService_EditUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICoordinatorService/EditUserResponse" message="tns:ICoordinatorService_EditUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICoordinatorService/GetCountries" message="tns:ICoordinatorService_GetCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICoordinatorService/GetCountriesResponse" message="tns:ICoordinatorService_GetCountries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationStatuses">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICoordinatorService/GetRegistrationStatuses" message="tns:ICoordinatorService_GetRegistrationStatuses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICoordinatorService/GetRegistrationStatusesResponse" message="tns:ICoordinatorService_GetRegistrationStatuses_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICoordinatorService" type="tns:ICoordinatorService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetAllRunners">
       <soap:operation soapAction="http://tempuri.org/ICoordinatorService/GetAllRunners" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditUser">
+      <soap:operation soapAction="http://tempuri.org/ICoordinatorService/EditUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <soap:operation soapAction="http://tempuri.org/ICoordinatorService/GetCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationStatuses">
+      <soap:operation soapAction="http://tempuri.org/ICoordinatorService/GetRegistrationStatuses" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

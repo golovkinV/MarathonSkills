@@ -21,5 +21,11 @@ namespace SerializationClasses
             this.name = name;
             this.cost = Convert.ToDouble(cost);
         }
+
+        public Event(string id, string name)
+        {
+            this.id = id;
+            this.name = name;
+        }
     }
 }

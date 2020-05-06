@@ -120,11 +120,21 @@ namespace TestingForm
             client.SponsorRunner("Tea Jr.", runner, 50);
         }
 
-        private async void button12_Click(object sender, EventArgs e)
+        private void button12_Click(object sender, EventArgs e)
         {
             var client = new CoordinatorService.CoordinatorServiceClient();
-            var keks = await client.GetAllRunnersAsync();
+            var keks = client.GetAllRunners();
             var lol = 0;
+        }
+
+        private async void button13_Click(object sender, EventArgs e)
+        {
+            var client = new CoordinatorService.CoordinatorServiceClient();
+            var runner = client.GetAllRunners().First(x => x.lastName == "Tea");
+            runner.password = "test123";
+            runner.runnerData.dateOfBirth = "15.05.1999";
+            runner.registrationStatus.id = 2;
+            await client.EditUserAsync(runner);
         }
     }
 }
