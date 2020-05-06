@@ -77,7 +77,7 @@ namespace CoordinatorService
                 user.runnerData.target = Convert.ToDouble(reader["Cost"].ToString());
                 users.Add(user);
             }
-            SetRunnersEvent(users);
+            //SetRunnersEvent(users);
             return users;
         }
 
