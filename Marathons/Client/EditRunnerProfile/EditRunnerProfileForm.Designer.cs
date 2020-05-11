@@ -43,13 +43,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.emailLabel = new System.Windows.Forms.Label();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.passwordConfirm_textBox = new System.Windows.Forms.TextBox();
+            this.password_textBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.emailInputLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.footerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -213,19 +212,19 @@
             this.lastNameTextBox.Size = new System.Drawing.Size(161, 20);
             this.lastNameTextBox.TabIndex = 34;
             // 
-            // textBox2
+            // passwordConfirm_textBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(533, 262);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 32;
+            this.passwordConfirm_textBox.Location = new System.Drawing.Point(533, 262);
+            this.passwordConfirm_textBox.Name = "passwordConfirm_textBox";
+            this.passwordConfirm_textBox.Size = new System.Drawing.Size(100, 20);
+            this.passwordConfirm_textBox.TabIndex = 32;
             // 
-            // textBox1
+            // password_textBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(533, 226);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 31;
+            this.password_textBox.Location = new System.Drawing.Point(533, 226);
+            this.password_textBox.Name = "password_textBox";
+            this.password_textBox.Size = new System.Drawing.Size(100, 20);
+            this.password_textBox.TabIndex = 31;
             // 
             // label2
             // 
@@ -271,22 +270,11 @@
             this.label10.Text = "Leave these filds blank if you do not want to change the password.\r\n\r\n";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(117, 341);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "test";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // EditRunnerProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 450);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.emailInputLabel);
@@ -304,8 +292,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.lastNameTextBox);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.passwordConfirm_textBox);
+            this.Controls.Add(this.password_textBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.firstNameTextBox);
             this.Name = "EditRunnerProfileForm";
@@ -316,8 +304,8 @@
             this.Controls.SetChildIndex(this.footerPanel, 0);
             this.Controls.SetChildIndex(this.firstNameTextBox, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
+            this.Controls.SetChildIndex(this.password_textBox, 0);
+            this.Controls.SetChildIndex(this.passwordConfirm_textBox, 0);
             this.Controls.SetChildIndex(this.lastNameTextBox, 0);
             this.Controls.SetChildIndex(this.emailLabel, 0);
             this.Controls.SetChildIndex(this.label3, 0);
@@ -335,7 +323,6 @@
             this.Controls.SetChildIndex(this.emailInputLabel, 0);
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.label10, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.footerPanel.ResumeLayout(false);
@@ -362,12 +349,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.TextBox lastNameTextBox;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox passwordConfirm_textBox;
+        private System.Windows.Forms.TextBox password_textBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label emailInputLabel;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button1;
     }
 }

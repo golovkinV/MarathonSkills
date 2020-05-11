@@ -78,7 +78,7 @@ namespace TestingForm
         {
             var client = new AdminService.AdminServiceClient();
             var keks = await client.GetAllUserAsync();
-            var lol = 0;
+            //var lol = 0;
         }
 
         private async void button7_Click(object sender, EventArgs e)
@@ -110,7 +110,7 @@ namespace TestingForm
         {
             var client = new SponsorService.SponsorServiceClient();
             var keks = await client.GetRunnersAsync();
-            var lol = 0;
+            //var lol = 0;
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -124,7 +124,7 @@ namespace TestingForm
         {
             var client = new CoordinatorService.CoordinatorServiceClient();
             var keks = client.GetAllRunners();
-            var lol = 0;
+            //var lol = 0;
         }
 
         private async void button13_Click(object sender, EventArgs e)
@@ -141,7 +141,7 @@ namespace TestingForm
         {
             var client = new InfoService.InfoServiceClient();
             var keks = client.GetRaces();
-            var lol = 0;
+            //var lol = 0;
         }
     }
 }

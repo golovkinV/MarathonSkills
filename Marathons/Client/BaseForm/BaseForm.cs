@@ -27,5 +27,10 @@ namespace Client.BaseForm
         {
             timer.Start();
         }
+
+        private void BaseForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -51,5 +51,12 @@ namespace Client.RunnerMenu
         {
 
         }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            Form registerForEventForm = new RegisterForEvent.RegisterForEvent(user);
+            Hide();
+            registerForEventForm.Show();
+        }
     }
 }

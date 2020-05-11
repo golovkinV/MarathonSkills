@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://schemas.datacontract.org/2004/07/UserService" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/SerializationClasses" />
   <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:element name="Login">
     <xs:complexType>
@@ -13,14 +13,14 @@
   <xs:element name="LoginResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/UserService" minOccurs="0" name="LoginResult" nillable="true" type="q1:User" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SerializationClasses" minOccurs="0" name="LoginResult" nillable="true" type="q1:User" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="EditUser">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/UserService" minOccurs="0" name="user" nillable="true" type="q2:User" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SerializationClasses" minOccurs="0" name="user" nillable="true" type="q2:User" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -71,7 +71,7 @@
   <xs:element name="GetEventsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/UserService" minOccurs="0" name="GetEventsResult" nillable="true" type="q4:ArrayOfEvent" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SerializationClasses" minOccurs="0" name="GetEventsResult" nillable="true" type="q4:ArrayOfEvent" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -83,7 +83,7 @@
   <xs:element name="GetKitOptionsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/UserService" minOccurs="0" name="GetKitOptionsResult" nillable="true" type="q5:ArrayOfKitOption" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SerializationClasses" minOccurs="0" name="GetKitOptionsResult" nillable="true" type="q5:ArrayOfKitOption" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -95,7 +95,7 @@
   <xs:element name="GetCharitiesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/UserService" minOccurs="0" name="GetCharitiesResult" nillable="true" type="q6:ArrayOfCharity" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SerializationClasses" minOccurs="0" name="GetCharitiesResult" nillable="true" type="q6:ArrayOfCharity" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -107,7 +107,7 @@
   <xs:element name="GetCountriesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/UserService" minOccurs="0" name="GetCountriesResult" nillable="true" type="q7:ArrayOfCountry" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SerializationClasses" minOccurs="0" name="GetCountriesResult" nillable="true" type="q7:ArrayOfCountry" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

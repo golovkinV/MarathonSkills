@@ -30,6 +30,7 @@ namespace Client
             {
                 user = client.Login(login, password);
                 passwordTextBox.Text = user.password;
+                popupPanel.BringToFront();
                 popupPanel.Visible = true;
             }
             catch

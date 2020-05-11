@@ -35,6 +35,7 @@
             this.footerPanel = new System.Windows.Forms.Panel();
             this.timerLabel = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.logoutButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.footerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -42,6 +43,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.panel1.Controls.Add(this.logoutButton);
             this.panel1.Controls.Add(this.backButton);
             this.panel1.Controls.Add(this.headerLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -84,18 +86,28 @@
             // 
             // timerLabel
             // 
-            this.timerLabel.AutoSize = true;
             this.timerLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.timerLabel.ForeColor = System.Drawing.Color.White;
-            this.timerLabel.Location = new System.Drawing.Point(252, 7);
+            this.timerLabel.Location = new System.Drawing.Point(54, 7);
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(40, 16);
+            this.timerLabel.Size = new System.Drawing.Size(566, 16);
             this.timerLabel.TabIndex = 0;
             this.timerLabel.Text = "Timer";
+            this.timerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer
             // 
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.Location = new System.Drawing.Point(583, 17);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(75, 23);
+            this.logoutButton.TabIndex = 6;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Visible = false;
             // 
             // BaseForm
             // 
@@ -107,11 +119,11 @@
             this.Name = "BaseForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BaseForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BaseForm_FormClosed);
             this.Load += new System.EventHandler(this.BaseForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.footerPanel.ResumeLayout(false);
-            this.footerPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -124,5 +136,6 @@
         public System.Windows.Forms.Panel footerPanel;
         public System.Windows.Forms.Label timerLabel;
         public System.Windows.Forms.Timer timer;
+        public System.Windows.Forms.Button logoutButton;
     }
 }

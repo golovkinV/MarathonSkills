@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Client.UserService;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,13 +32,15 @@ namespace Client.RegsterAsRunner
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            Form registerForEvent = new RegisterForEvent.RegisterForEvent();
+            User user = new User();
+            Form registerForEvent = new RegisterForEvent.RegisterForEvent(user);
             Hide();
             registerForEvent.Show();
         }
 
         private void RegisterAsRunnerForm_Load(object sender, EventArgs e)
         {
+
 
         }
     }

@@ -1,16 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UserService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UserService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SerializationClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SerializationClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:complexType name="User">
     <xs:sequence>
       <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="registrationStatus" nillable="true" type="tns:RegistrationStatus" />
       <xs:element minOccurs="0" name="role" nillable="true" type="tns:Role" />
       <xs:element minOccurs="0" name="runnerData" nillable="true" type="tns:RunnerData" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="RegistrationStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="registrationId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrationStatus" nillable="true" type="tns:RegistrationStatus" />
   <xs:complexType name="Role">
     <xs:sequence>
       <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
@@ -20,13 +29,27 @@
   <xs:element name="Role" nillable="true" type="tns:Role" />
   <xs:complexType name="RunnerData">
     <xs:sequence>
+      <xs:element minOccurs="0" name="charity" nillable="true" type="tns:Charity" />
       <xs:element minOccurs="0" name="country" nillable="true" type="tns:Country" />
       <xs:element minOccurs="0" name="dateOfBirth" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="events" nillable="true" type="tns:ArrayOfEvent" />
       <xs:element minOccurs="0" name="gender" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="kitOption" nillable="true" type="tns:KitOption" />
+      <xs:element minOccurs="0" name="target" type="xs:double" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="RunnerData" nillable="true" type="tns:RunnerData" />
+  <xs:complexType name="Charity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="logo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="totalAmount" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Charity" nillable="true" type="tns:Charity" />
   <xs:complexType name="Country">
     <xs:sequence>
       <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
@@ -48,12 +71,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Event" nillable="true" type="tns:Event" />
-  <xs:complexType name="ArrayOfKitOption">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="KitOption" nillable="true" type="tns:KitOption" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfKitOption" nillable="true" type="tns:ArrayOfKitOption" />
   <xs:complexType name="KitOption">
     <xs:sequence>
       <xs:element minOccurs="0" name="cost" type="xs:double" />
@@ -62,19 +79,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="KitOption" nillable="true" type="tns:KitOption" />
+  <xs:complexType name="ArrayOfKitOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KitOption" nillable="true" type="tns:KitOption" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKitOption" nillable="true" type="tns:ArrayOfKitOption" />
   <xs:complexType name="ArrayOfCharity">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Charity" nillable="true" type="tns:Charity" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfCharity" nillable="true" type="tns:ArrayOfCharity" />
-  <xs:complexType name="Charity">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="id" type="xs:int" />
-      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Charity" nillable="true" type="tns:Charity" />
   <xs:complexType name="ArrayOfCountry">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Country" nillable="true" type="tns:Country" />

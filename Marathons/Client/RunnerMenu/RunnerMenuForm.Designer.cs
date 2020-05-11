@@ -71,6 +71,7 @@
             this.registerButton.TabIndex = 20;
             this.registerButton.Text = "Register for an event";
             this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // raceResultsButton
             // 
@@ -121,7 +122,7 @@
             this.popupPanel.Controls.Add(this.label1);
             this.popupPanel.Controls.Add(this.headLabel);
             this.popupPanel.Controls.Add(this.closePopupButton);
-            this.popupPanel.Location = new System.Drawing.Point(154, 98);
+            this.popupPanel.Location = new System.Drawing.Point(154, 95);
             this.popupPanel.Name = "popupPanel";
             this.popupPanel.Size = new System.Drawing.Size(487, 261);
             this.popupPanel.TabIndex = 25;
