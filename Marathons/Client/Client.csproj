@@ -82,6 +82,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\SponsorService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\UserService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -112,6 +117,12 @@
     </Compile>
     <Compile Include="RegisterForEvent\RegisterForEvent.Designer.cs">
       <DependentUpon>RegisterForEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationConfirmation\RegistrationConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationConfirmation\RegistrationConfirmationForm.Designer.cs">
+      <DependentUpon>RegistrationConfirmationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RegsterAsRunner\RegisterAsRunnerForm.cs">
       <SubType>Form</SubType>
@@ -151,20 +162,23 @@
     <EmbeddedResource Include="RegisterForEvent\RegisterForEvent.resx">
       <DependentUpon>RegisterForEvent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationConfirmation\RegistrationConfirmationForm.resx">
+      <DependentUpon>RegistrationConfirmationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegsterAsRunner\RegisterAsRunnerForm.resx">
       <DependentUpon>RegisterAsRunnerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RunnerMenu\RunnerMenuForm.resx">
       <DependentUpon>RunnerMenuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\AdminService\AdminService.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\AdminService\Client.AdminService.Charity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AdminService\Client.AdminService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminService\SerializationClasses.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\AdminService\service.wsdl" />
     <None Include="Connected Services\AdminService\service.xsd">
@@ -182,7 +196,7 @@
     <None Include="Connected Services\RunnerService\Client.RunnerService.Sponsor.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\RunnerService\RunnerService.xsd">
+    <None Include="Connected Services\RunnerService\SerializationClasses.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\RunnerService\service.wsdl" />
@@ -190,6 +204,19 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\RunnerService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SponsorService\Client.SponsorService.Runner.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SponsorService\SerializationClasses.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SponsorService\service.wsdl" />
+    <None Include="Connected Services\SponsorService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SponsorService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\UserService\Arrays.xsd">
@@ -210,14 +237,14 @@
     <None Include="Connected Services\UserService\Client.UserService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\UserService\SerializationClasses.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\UserService\service.wsdl" />
     <None Include="Connected Services\UserService\service.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\UserService\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\UserService\UserService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
@@ -239,6 +266,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\AdminService\" />
     <WCFMetadataStorage Include="Connected Services\RunnerService\" />
+    <WCFMetadataStorage Include="Connected Services\SponsorService\" />
     <WCFMetadataStorage Include="Connected Services\UserService\" />
   </ItemGroup>
   <ItemGroup>
@@ -279,6 +307,60 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SponsorService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SponsorService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SponsorService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arise-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aves-do-brazil-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clara-santos-oliveira-institute-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conquer-cancer-brazil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diabetes-brazil-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart-health-sao-paulo-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\human-rights-centre-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oxfam-international-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\querstadtein-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-the-children-fund-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stay-pumped-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the-red-cross-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upbeat-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wwsm-rescue-logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

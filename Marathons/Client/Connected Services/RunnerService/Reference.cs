@@ -15,7 +15,7 @@ namespace Client.RunnerService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Sponsor", Namespace="http://schemas.datacontract.org/2004/07/RunnerService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Sponsor", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class Sponsor : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -124,7 +124,7 @@ namespace Client.RunnerService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Charity", Namespace="http://schemas.datacontract.org/2004/07/RunnerService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Charity", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class Charity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -142,6 +142,9 @@ namespace Client.RunnerService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string nameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double totalAmountField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -205,6 +208,19 @@ namespace Client.RunnerService {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double totalAmount {
+            get {
+                return this.totalAmountField;
+            }
+            set {
+                if ((this.totalAmountField.Equals(value) != true)) {
+                    this.totalAmountField = value;
+                    this.RaisePropertyChanged("totalAmount");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -217,7 +233,7 @@ namespace Client.RunnerService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RaceInfo", Namespace="http://schemas.datacontract.org/2004/07/RunnerService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RaceInfo", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class RaceInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         

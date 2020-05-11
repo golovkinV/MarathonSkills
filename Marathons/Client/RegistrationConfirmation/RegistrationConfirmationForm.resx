@@ -117,47 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="arise_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arise-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="aves_do_brazil_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\aves-do-brazil-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="clara_santos_oliveira_institute_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clara-santos-oliveira-institute-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="conquer_cancer_brazil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\conquer-cancer-brazil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="diabetes_brazil_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\diabetes-brazil-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="heart_health_sao_paulo_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\heart-health-sao-paulo-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="human_rights_centre_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\human-rights-centre-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="oxfam_international_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\oxfam-international-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="querstadtein_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\querstadtein-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="save_the_children_fund_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save-the-children-fund-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stay_pumped_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stay-pumped-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="the_red_cross_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\the-red-cross-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="upbeat_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\upbeat-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wwsm_rescue_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wwsm-rescue-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

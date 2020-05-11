@@ -15,7 +15,7 @@ namespace Client.UserService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/UserService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -33,6 +33,9 @@ namespace Client.UserService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string passwordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Client.UserService.RegistrationStatus registrationStatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Client.UserService.Role roleField;
@@ -103,6 +106,19 @@ namespace Client.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public Client.UserService.RegistrationStatus registrationStatus {
+            get {
+                return this.registrationStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.registrationStatusField, value) != true)) {
+                    this.registrationStatusField = value;
+                    this.RaisePropertyChanged("registrationStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public Client.UserService.Role role {
             get {
                 return this.roleField;
@@ -140,7 +156,84 @@ namespace Client.UserService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Role", Namespace="http://schemas.datacontract.org/2004/07/UserService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RegistrationStatus", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
+    [System.SerializableAttribute()]
+    public partial class RegistrationStatus : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int registrationIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int registrationId {
+            get {
+                return this.registrationIdField;
+            }
+            set {
+                if ((this.registrationIdField.Equals(value) != true)) {
+                    this.registrationIdField = value;
+                    this.RaisePropertyChanged("registrationId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Role", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class Role : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -201,12 +294,15 @@ namespace Client.UserService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RunnerData", Namespace="http://schemas.datacontract.org/2004/07/UserService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RunnerData", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class RunnerData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Client.UserService.Charity charityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Client.UserService.Country countryField;
@@ -215,10 +311,19 @@ namespace Client.UserService {
         private string dateOfBirthField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Client.UserService.Event[] eventsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string genderField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Client.UserService.KitOption kitOptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double targetField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -227,6 +332,19 @@ namespace Client.UserService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Client.UserService.Charity charity {
+            get {
+                return this.charityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.charityField, value) != true)) {
+                    this.charityField = value;
+                    this.RaisePropertyChanged("charity");
+                }
             }
         }
         
@@ -257,6 +375,19 @@ namespace Client.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public Client.UserService.Event[] events {
+            get {
+                return this.eventsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.eventsField, value) != true)) {
+                    this.eventsField = value;
+                    this.RaisePropertyChanged("events");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string gender {
             get {
                 return this.genderField;
@@ -282,6 +413,32 @@ namespace Client.UserService {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Client.UserService.KitOption kitOption {
+            get {
+                return this.kitOptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.kitOptionField, value) != true)) {
+                    this.kitOptionField = value;
+                    this.RaisePropertyChanged("kitOption");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double target {
+            get {
+                return this.targetField;
+            }
+            set {
+                if ((this.targetField.Equals(value) != true)) {
+                    this.targetField = value;
+                    this.RaisePropertyChanged("target");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -294,7 +451,116 @@ namespace Client.UserService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Country", Namespace="http://schemas.datacontract.org/2004/07/UserService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Charity", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
+    [System.SerializableAttribute()]
+    public partial class Charity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string descField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string logoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double totalAmountField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string desc {
+            get {
+                return this.descField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.descField, value) != true)) {
+                    this.descField = value;
+                    this.RaisePropertyChanged("desc");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string logo {
+            get {
+                return this.logoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.logoField, value) != true)) {
+                    this.logoField = value;
+                    this.RaisePropertyChanged("logo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double totalAmount {
+            get {
+                return this.totalAmountField;
+            }
+            set {
+                if ((this.totalAmountField.Equals(value) != true)) {
+                    this.totalAmountField = value;
+                    this.RaisePropertyChanged("totalAmount");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Country", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class Country : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -355,84 +621,7 @@ namespace Client.UserService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Event", Namespace="http://schemas.datacontract.org/2004/07/UserService")]
-    [System.SerializableAttribute()]
-    public partial class Event : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private double costField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string nameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double cost {
-            get {
-                return this.costField;
-            }
-            set {
-                if ((this.costField.Equals(value) != true)) {
-                    this.costField = value;
-                    this.RaisePropertyChanged("cost");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string id {
-            get {
-                return this.idField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.idField, value) != true)) {
-                    this.idField = value;
-                    this.RaisePropertyChanged("id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.nameField, value) != true)) {
-                    this.nameField = value;
-                    this.RaisePropertyChanged("name");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="KitOption", Namespace="http://schemas.datacontract.org/2004/07/UserService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="KitOption", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
     public partial class KitOption : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -509,15 +698,18 @@ namespace Client.UserService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Charity", Namespace="http://schemas.datacontract.org/2004/07/UserService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Event", Namespace="http://schemas.datacontract.org/2004/07/SerializationClasses")]
     [System.SerializableAttribute()]
-    public partial class Charity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Event : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int idField;
+        private double costField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string idField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string nameField;
@@ -533,12 +725,25 @@ namespace Client.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int id {
+        public double cost {
+            get {
+                return this.costField;
+            }
+            set {
+                if ((this.costField.Equals(value) != true)) {
+                    this.costField = value;
+                    this.RaisePropertyChanged("cost");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string id {
             get {
                 return this.idField;
             }
             set {
-                if ((this.idField.Equals(value) != true)) {
+                if ((object.ReferenceEquals(this.idField, value) != true)) {
                     this.idField = value;
                     this.RaisePropertyChanged("id");
                 }
