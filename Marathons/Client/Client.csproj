@@ -157,6 +157,9 @@
     <EmbeddedResource Include="EditRunnerProfile\EditRunnerProfileForm.resx">
       <DependentUpon>EditRunnerProfileForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FindOutMore\FindOutMoreForm.resx">
+      <DependentUpon>FindOutMoreForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

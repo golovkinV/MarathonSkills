@@ -129,7 +129,7 @@
             this.Controls.Add(this.previosRaceResultsButton);
             this.Controls.Add(this.marathonSkills2015Button);
             this.Name = "FindOutMoreForm";
-            this.Text = "Form1";
+            this.Text = "FindOutMoreForm";
             this.Controls.SetChildIndex(this.marathonSkills2015Button, 0);
             this.Controls.SetChildIndex(this.previosRaceResultsButton, 0);
             this.Controls.SetChildIndex(this.bmiCalculatorButton, 0);
