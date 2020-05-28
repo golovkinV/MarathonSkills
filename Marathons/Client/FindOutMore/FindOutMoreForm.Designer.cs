@@ -63,6 +63,7 @@
             // 
             // previosRaceResultsButton
             // 
+            this.previosRaceResultsButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.previosRaceResultsButton.Location = new System.Drawing.Point(109, 230);
             this.previosRaceResultsButton.Name = "previosRaceResultsButton";
             this.previosRaceResultsButton.Size = new System.Drawing.Size(183, 73);
@@ -72,6 +73,7 @@
             // 
             // bmiCalculatorButton
             // 
+            this.bmiCalculatorButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bmiCalculatorButton.Location = new System.Drawing.Point(109, 326);
             this.bmiCalculatorButton.Name = "bmiCalculatorButton";
             this.bmiCalculatorButton.Size = new System.Drawing.Size(183, 73);
@@ -81,6 +83,7 @@
             // 
             // bmrCalculatorButton
             // 
+            this.bmrCalculatorButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bmrCalculatorButton.Location = new System.Drawing.Point(411, 326);
             this.bmrCalculatorButton.Name = "bmrCalculatorButton";
             this.bmrCalculatorButton.Size = new System.Drawing.Size(183, 73);
@@ -90,6 +93,7 @@
             // 
             // listOfCharitiesButton
             // 
+            this.listOfCharitiesButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listOfCharitiesButton.Location = new System.Drawing.Point(411, 230);
             this.listOfCharitiesButton.Name = "listOfCharitiesButton";
             this.listOfCharitiesButton.Size = new System.Drawing.Size(183, 73);
@@ -99,6 +103,7 @@
             // 
             // howLongIsAMarathonButton
             // 
+            this.howLongIsAMarathonButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.howLongIsAMarathonButton.Location = new System.Drawing.Point(411, 142);
             this.howLongIsAMarathonButton.Name = "howLongIsAMarathonButton";
             this.howLongIsAMarathonButton.Size = new System.Drawing.Size(183, 73);
@@ -109,10 +114,10 @@
             // findOutMoreInformationLabel
             // 
             this.findOutMoreInformationLabel.AutoSize = true;
-            this.findOutMoreInformationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.findOutMoreInformationLabel.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.findOutMoreInformationLabel.Location = new System.Drawing.Point(234, 91);
             this.findOutMoreInformationLabel.Name = "findOutMoreInformationLabel";
-            this.findOutMoreInformationLabel.Size = new System.Drawing.Size(287, 29);
+            this.findOutMoreInformationLabel.Size = new System.Drawing.Size(288, 27);
             this.findOutMoreInformationLabel.TabIndex = 26;
             this.findOutMoreInformationLabel.Text = "Find out more information";
             // 

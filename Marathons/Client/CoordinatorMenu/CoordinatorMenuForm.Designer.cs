@@ -50,7 +50,7 @@
             // 
             // runnersButton
             // 
-            this.runnersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.runnersButton.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.runnersButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.runnersButton.Location = new System.Drawing.Point(149, 168);
             this.runnersButton.Name = "runnersButton";
@@ -61,7 +61,7 @@
             // 
             // sponsorshipButton
             // 
-            this.sponsorshipButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sponsorshipButton.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.sponsorshipButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.sponsorshipButton.Location = new System.Drawing.Point(461, 168);
             this.sponsorshipButton.Name = "sponsorshipButton";
@@ -73,11 +73,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.label1.Location = new System.Drawing.Point(293, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 29);
+            this.label1.Size = new System.Drawing.Size(205, 27);
             this.label1.TabIndex = 22;
             this.label1.Text = "Coordinator menu";
             // 
