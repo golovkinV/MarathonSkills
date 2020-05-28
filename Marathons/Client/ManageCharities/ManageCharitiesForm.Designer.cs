@@ -145,7 +145,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "ManageCharitiesForm";
-            this.Text = "ManageCharitiesForm";
+            this.Text = "Marathon Skills 2015 - Manage Charities";
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.footerPanel, 0);
             this.Controls.SetChildIndex(this.label1, 0);
