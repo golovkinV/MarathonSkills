@@ -42,6 +42,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.roleComboBox = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.footerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -146,7 +148,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(12, 255);
+            this.label4.Location = new System.Drawing.Point(15, 255);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 19);
             this.label4.TabIndex = 25;
@@ -225,11 +227,35 @@
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             // 
+            // roleComboBox
+            // 
+            this.roleComboBox.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.roleComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
+            this.roleComboBox.FormattingEnabled = true;
+            this.roleComboBox.Location = new System.Drawing.Point(111, 293);
+            this.roleComboBox.Name = "roleComboBox";
+            this.roleComboBox.Size = new System.Drawing.Size(97, 27);
+            this.roleComboBox.TabIndex = 52;
+            this.roleComboBox.Text = "Runner";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label9.Location = new System.Drawing.Point(59, 301);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 19);
+            this.label9.TabIndex = 51;
+            this.label9.Text = "Role:";
+            // 
             // AddANewUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 450);
+            this.Controls.Add(this.roleComboBox);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.passwordAgainTextBox);
@@ -263,6 +289,8 @@
             this.Controls.SetChildIndex(this.passwordAgainTextBox, 0);
             this.Controls.SetChildIndex(this.saveButton, 0);
             this.Controls.SetChildIndex(this.cancelButton, 0);
+            this.Controls.SetChildIndex(this.label9, 0);
+            this.Controls.SetChildIndex(this.roleComboBox, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.footerPanel.ResumeLayout(false);
@@ -287,5 +315,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.ComboBox roleComboBox;
+        private System.Windows.Forms.Label label9;
     }
 }
