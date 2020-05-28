@@ -117,6 +117,12 @@
     <Compile Include="Main\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageCharities\ManageCharitiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageCharities\ManageCharitiesForm.Designer.cs">
+      <DependentUpon>ManageCharitiesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PreviosRaceResults\PreviosRaceResultsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageCharities\ManageCharitiesForm.resx">
+      <DependentUpon>ManageCharitiesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PreviosRaceResults\PreviosRaceResultsForm.resx">
       <DependentUpon>PreviosRaceResultsForm.cs</DependentUpon>
