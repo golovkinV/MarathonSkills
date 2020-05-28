@@ -112,6 +112,12 @@
     <Compile Include="CoordinatorMenu\CoordinatorMenuForm.Designer.cs">
       <DependentUpon>CoordinatorMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditAUser\EditAUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAUser\EditAUserForm.Designer.cs">
+      <DependentUpon>EditAUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditRunnerProfile\EditRunnerProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CoordinatorMenu\CoordinatorMenuForm.resx">
       <DependentUpon>CoordinatorMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAUser\EditAUserForm.resx">
+      <DependentUpon>EditAUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditRunnerProfile\EditRunnerProfileForm.resx">
       <DependentUpon>EditRunnerProfileForm.cs</DependentUpon>
