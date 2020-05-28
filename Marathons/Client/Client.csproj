@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
@@ -48,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add-EditCharity\Add-EditCharityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add-EditCharity\Add-EditCharityForm.Designer.cs">
+      <DependentUpon>Add-EditCharityForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdministratorMenu\AdministratorMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +173,9 @@
     <Compile Include="SponsorshipOverview\SponsorshipOverviewForm.Designer.cs">
       <DependentUpon>SponsorshipOverviewForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add-EditCharity\Add-EditCharityForm.resx">
+      <DependentUpon>Add-EditCharityForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdministratorMenu\AdministratorMenuForm.resx">
       <DependentUpon>AdministratorMenuForm.cs</DependentUpon>
     </EmbeddedResource>
