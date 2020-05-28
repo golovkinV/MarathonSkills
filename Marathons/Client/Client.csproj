@@ -154,6 +154,12 @@
     <Compile Include="RunnerMenu\RunnerMenuForm.Designer.cs">
       <DependentUpon>RunnerMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SponsorshipOverview\SponsorshipOverviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SponsorshipOverview\SponsorshipOverviewForm.Designer.cs">
+      <DependentUpon>SponsorshipOverviewForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdministratorMenu\AdministratorMenuForm.resx">
       <DependentUpon>AdministratorMenuForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RunnerMenu\RunnerMenuForm.resx">
       <DependentUpon>RunnerMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SponsorshipOverview\SponsorshipOverviewForm.resx">
+      <DependentUpon>SponsorshipOverviewForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Connected Services\AdminService\Client.AdminService.Charity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
