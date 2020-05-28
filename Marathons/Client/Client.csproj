@@ -173,6 +173,12 @@
     <Compile Include="SponsorshipOverview\SponsorshipOverviewForm.Designer.cs">
       <DependentUpon>SponsorshipOverviewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VolunteerManagement\VolunteerManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VolunteerManagement\VolunteerManagementForm.Designer.cs">
+      <DependentUpon>VolunteerManagementForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add-EditCharity\Add-EditCharityForm.resx">
       <DependentUpon>Add-EditCharityForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SponsorshipOverview\SponsorshipOverviewForm.resx">
       <DependentUpon>SponsorshipOverviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VolunteerManagement\VolunteerManagementForm.resx">
+      <DependentUpon>VolunteerManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Connected Services\AdminService\Client.AdminService.Charity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
