@@ -55,6 +55,12 @@
     <Compile Include="Add-EditCharity\Add-EditCharityForm.Designer.cs">
       <DependentUpon>Add-EditCharityForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddANewUser\AddANewUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddANewUser\AddANewUserForm.Designer.cs">
+      <DependentUpon>AddANewUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdministratorMenu\AdministratorMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </Compile>
     <EmbeddedResource Include="Add-EditCharity\Add-EditCharityForm.resx">
       <DependentUpon>Add-EditCharityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddANewUser\AddANewUserForm.resx">
+      <DependentUpon>AddANewUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdministratorMenu\AdministratorMenuForm.resx">
       <DependentUpon>AdministratorMenuForm.cs</DependentUpon>
