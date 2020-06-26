@@ -24,5 +24,24 @@ namespace Client.AdministratorMenu
             Hide();
             mainForm.Show();
         }
+
+        private void AdministratorMenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form manageCharitiesForm = new ManageCharities.ManageCharitiesForm();
+            Hide();
+            manageCharitiesForm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form volunteerManagementsForm = new VolunteerManagement.VolunteerManagementForm();
+            Hide();
+            volunteerManagementsForm.Show();
+        }
     }
 }

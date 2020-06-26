@@ -168,6 +168,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Coordinator";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // logAsRunnerButton
             // 
@@ -257,7 +258,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.footerPanel.ResumeLayout(false);
-            this.footerPanel.PerformLayout();
             this.popupPanel.ResumeLayout(false);
             this.popupPanel.PerformLayout();
             this.ResumeLayout(false);

@@ -61,5 +61,12 @@ namespace Client.MainForm
         private void wantSponsorButton_Click(object sender, EventArgs e)
         {
         }
+
+        private void wantFindMoreButton_Click(object sender, EventArgs e)
+        {
+            Form findOutMoreForm = new FindOutMore.FindOutMoreForm();
+            findOutMoreForm.Show();
+            Hide();
+        }
     }
 }

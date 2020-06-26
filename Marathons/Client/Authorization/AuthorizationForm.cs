@@ -80,5 +80,13 @@ namespace Client
             Hide();
             adminMenuForm.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form coordinatorMenuForm = new CoordinatorMenu.CoordinatorMenuForm();
+            coordinatorMenuForm.Owner = this;
+            Hide();
+            coordinatorMenuForm.Show();
+        }
     }
 }

@@ -132,6 +132,7 @@
             this.wantFindMoreButton.TabIndex = 4;
             this.wantFindMoreButton.Text = "I want to find out more";
             this.wantFindMoreButton.UseVisualStyleBackColor = true;
+            this.wantFindMoreButton.Click += new System.EventHandler(this.wantFindMoreButton_Click);
             // 
             // footerPanel
             // 
