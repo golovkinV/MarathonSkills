@@ -37,12 +37,12 @@
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(800, 65);
+            this.panel1.Size = new System.Drawing.Size(600, 53);
             // 
             // footerPanel
             // 
-            this.footerPanel.Location = new System.Drawing.Point(0, 414);
-            this.footerPanel.Size = new System.Drawing.Size(800, 36);
+            this.footerPanel.Location = new System.Drawing.Point(0, 337);
+            this.footerPanel.Size = new System.Drawing.Size(600, 29);
             // 
             // timer
             // 
@@ -52,9 +52,10 @@
             // 
             this.runnersButton.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.runnersButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
-            this.runnersButton.Location = new System.Drawing.Point(149, 168);
+            this.runnersButton.Location = new System.Drawing.Point(112, 136);
+            this.runnersButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.runnersButton.Name = "runnersButton";
-            this.runnersButton.Size = new System.Drawing.Size(231, 84);
+            this.runnersButton.Size = new System.Drawing.Size(173, 68);
             this.runnersButton.TabIndex = 20;
             this.runnersButton.Text = "Runners";
             this.runnersButton.UseVisualStyleBackColor = true;
@@ -63,32 +64,36 @@
             // 
             this.sponsorshipButton.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.sponsorshipButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
-            this.sponsorshipButton.Location = new System.Drawing.Point(461, 168);
+            this.sponsorshipButton.Location = new System.Drawing.Point(346, 136);
+            this.sponsorshipButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.sponsorshipButton.Name = "sponsorshipButton";
-            this.sponsorshipButton.Size = new System.Drawing.Size(231, 84);
+            this.sponsorshipButton.Size = new System.Drawing.Size(173, 68);
             this.sponsorshipButton.TabIndex = 21;
             this.sponsorshipButton.Text = "Sponsorship";
             this.sponsorshipButton.UseVisualStyleBackColor = true;
+            this.sponsorshipButton.Click += new System.EventHandler(this.sponsorshipButton_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
-            this.label1.Location = new System.Drawing.Point(293, 105);
+            this.label1.Location = new System.Drawing.Point(220, 85);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 27);
+            this.label1.Size = new System.Drawing.Size(161, 22);
             this.label1.TabIndex = 22;
             this.label1.Text = "Coordinator menu";
             // 
             // CoordinatorMenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sponsorshipButton);
             this.Controls.Add(this.runnersButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CoordinatorMenuForm";
             this.Text = "Marathon Skills 2015 - Coordinator Menu";
             this.Controls.SetChildIndex(this.panel1, 0);

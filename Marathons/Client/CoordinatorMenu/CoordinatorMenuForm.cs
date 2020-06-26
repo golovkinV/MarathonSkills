@@ -16,5 +16,12 @@ namespace Client.CoordinatorMenu
         {
             InitializeComponent();
         }
+
+        private void sponsorshipButton_Click(object sender, EventArgs e)
+        {
+            Form sponsorshipOverviewForm = new SponsorshipOverview.SponsorshipOverviewForm();
+            sponsorshipOverviewForm.Show();
+            Hide();
+        }
     }
 }

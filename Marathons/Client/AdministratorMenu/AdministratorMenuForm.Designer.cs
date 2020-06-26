@@ -70,6 +70,7 @@
             this.button2.TabIndex = 21;
             this.button2.Text = "Volunteers";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -79,6 +80,7 @@
             this.button3.TabIndex = 22;
             this.button3.Text = "Charities";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -100,6 +102,7 @@
             this.Controls.Add(this.button1);
             this.Name = "AdministratorMenuForm";
             this.Text = "AdministratorMenuForm";
+            this.Load += new System.EventHandler(this.AdministratorMenuForm_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.footerPanel, 0);
             this.Controls.SetChildIndex(this.button1, 0);
@@ -109,7 +112,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.footerPanel.ResumeLayout(false);
-            this.footerPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
