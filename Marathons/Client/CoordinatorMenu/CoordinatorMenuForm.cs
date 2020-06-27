@@ -23,5 +23,12 @@ namespace Client.CoordinatorMenu
             sponsorshipOverviewForm.Show();
             Hide();
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            Form runnerMenuForm = new MainForm.MainForm();
+            Hide();
+            runnerMenuForm.Show();
+        }
     }
 }

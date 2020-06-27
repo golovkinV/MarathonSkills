@@ -50,10 +50,12 @@
             // 
             this.backButton.Location = new System.Drawing.Point(18, 21);
             this.backButton.Size = new System.Drawing.Size(88, 28);
+            this.backButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // headerLabel
             // 
             this.headerLabel.Location = new System.Drawing.Point(120, 17);
+            this.headerLabel.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             // 
             // footerPanel
             // 
@@ -81,7 +83,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.label1.Location = new System.Drawing.Point(246, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 27);
+            this.label1.Size = new System.Drawing.Size(328, 38);
             this.label1.TabIndex = 20;
             this.label1.Text = "Sponsorship overview";
             // 
@@ -90,7 +92,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(212, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 16);
+            this.label2.Size = new System.Drawing.Size(75, 22);
             this.label2.TabIndex = 21;
             this.label2.Text = "Sort by:";
             // 
@@ -100,7 +102,7 @@
             this.totalAmountComboBox.FormattingEnabled = true;
             this.totalAmountComboBox.Location = new System.Drawing.Point(275, 142);
             this.totalAmountComboBox.Name = "totalAmountComboBox";
-            this.totalAmountComboBox.Size = new System.Drawing.Size(178, 24);
+            this.totalAmountComboBox.Size = new System.Drawing.Size(178, 29);
             this.totalAmountComboBox.TabIndex = 22;
             this.totalAmountComboBox.Text = "Total Amount";
             // 
@@ -120,7 +122,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.label3.Location = new System.Drawing.Point(117, 184);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 23);
+            this.label3.Size = new System.Drawing.Size(132, 32);
             this.label3.TabIndex = 24;
             this.label3.Text = "Charities:";
             // 
@@ -131,7 +133,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.label4.Location = new System.Drawing.Point(351, 184);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(172, 23);
+            this.label4.Size = new System.Drawing.Size(244, 32);
             this.label4.TabIndex = 25;
             this.label4.Text = "Total Sponsorship:";
             // 
@@ -142,7 +144,7 @@
             this.charitiesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.charitiesLabel.Location = new System.Drawing.Point(216, 184);
             this.charitiesLabel.Name = "charitiesLabel";
-            this.charitiesLabel.Size = new System.Drawing.Size(21, 23);
+            this.charitiesLabel.Size = new System.Drawing.Size(31, 32);
             this.charitiesLabel.TabIndex = 26;
             this.charitiesLabel.Text = "0";
             // 
@@ -153,7 +155,7 @@
             this.totalSponsorshipLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.totalSponsorshipLabel.Location = new System.Drawing.Point(529, 184);
             this.totalSponsorshipLabel.Name = "totalSponsorshipLabel";
-            this.totalSponsorshipLabel.Size = new System.Drawing.Size(32, 23);
+            this.totalSponsorshipLabel.Size = new System.Drawing.Size(47, 32);
             this.totalSponsorshipLabel.TabIndex = 27;
             this.totalSponsorshipLabel.Text = "$0";
             // 
@@ -169,7 +171,7 @@
             // 
             // SponsorshipOverviewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
