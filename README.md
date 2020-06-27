@@ -295,3 +295,38 @@
   * ***GetAllCharity()*** - метод для получения списка благотворительных фондов 
 
 		Возвращает: List<Charity>.
+
+### 5. Sponsor Service
+
+#### Описание классов:
+				
+  * класс *Runner*:
+		
+		id - id участника;
+			
+		registrationId - статус регистрации;
+			
+		firstName - имя;
+			
+		lastName - фамилия;
+		
+		country - код страны;
+		
+		sponsorshipTarget - спонсорская поддержка;
+		
+		charity - объект класса Charity
+		
+#### Методы сервиса:
+
+  * ***GetRunners()*** - метод для получения всех участников забегов
+
+		Возвращает: List<Runner>.
+		
+  * ***SponsorRunner(string name, Runner runner, double amount)*** - метод для спонсирования участника забега
+
+		Параметры: 
+		  name - имя спонсора;
+		  runner - участник забега;
+		  amount - сумма спонсирования.
+
+		Возвращает: void метод.
