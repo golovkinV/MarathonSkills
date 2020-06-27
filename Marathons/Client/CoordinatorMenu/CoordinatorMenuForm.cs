@@ -30,5 +30,12 @@ namespace Client.CoordinatorMenu
             Hide();
             runnerMenuForm.Show();
         }
+
+        private void RunnersButton_Click(object sender, EventArgs e)
+        {
+            Form runnerMenuForm = new AllRunner.AllRunnerForm();
+            Hide();
+            runnerMenuForm.Show();
+        }
     }
 }

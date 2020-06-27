@@ -161,6 +161,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(29, 212);
             this.dataGridView1.Name = "dataGridView1";
@@ -186,6 +187,7 @@
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "SponsorshipOverviewForm";
             this.Text = "Marathon Skills 2015 - Sponsorship Overview";
+            this.Load += new System.EventHandler(this.SponsorshipOverviewForm_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.footerPanel, 0);
             this.Controls.SetChildIndex(this.label1, 0);

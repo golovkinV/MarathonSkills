@@ -19,9 +19,16 @@ namespace Client.SponsorshipOverview
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            Form runnerMenuForm = new MainForm.MainForm();
+            Form runnerMenuForm = new CoordinatorMenu.CoordinatorMenuForm();
             Hide();
             runnerMenuForm.Show();
+        }
+
+        private void SponsorshipOverviewForm_Load(object sender, EventArgs e)
+        {
+            var client = new CoordinatorService.CoordinatorServiceClient();
+            var countries = client.GetCharities();
+            dataGridView1.DataSource = countries;
         }
     }
 }

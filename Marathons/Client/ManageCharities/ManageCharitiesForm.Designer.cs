@@ -31,10 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.logoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             this.footerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -97,46 +93,14 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.logoColumn,
-            this.nameColumn,
-            this.descriptionColumn,
-            this.editColumn});
             this.dataGridView1.Location = new System.Drawing.Point(72, 206);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(651, 187);
             this.dataGridView1.TabIndex = 22;
-            // 
-            // logoColumn
-            // 
-            this.logoColumn.HeaderText = "Logo";
-            this.logoColumn.MinimumWidth = 6;
-            this.logoColumn.Name = "logoColumn";
-            this.logoColumn.Width = 175;
-            // 
-            // nameColumn
-            // 
-            this.nameColumn.HeaderText = "Name";
-            this.nameColumn.MinimumWidth = 6;
-            this.nameColumn.Name = "nameColumn";
-            this.nameColumn.Width = 170;
-            // 
-            // descriptionColumn
-            // 
-            this.descriptionColumn.HeaderText = "Description";
-            this.descriptionColumn.MinimumWidth = 6;
-            this.descriptionColumn.Name = "descriptionColumn";
-            this.descriptionColumn.Width = 200;
-            // 
-            // editColumn
-            // 
-            this.editColumn.HeaderText = "Edit";
-            this.editColumn.MinimumWidth = 6;
-            this.editColumn.Name = "editColumn";
-            this.editColumn.Width = 125;
             // 
             // ManageCharitiesForm
             // 
@@ -149,6 +113,7 @@
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "ManageCharitiesForm";
             this.Text = "Marathon Skills 2015 - Manage Charities";
+            this.Load += new System.EventHandler(this.ManageCharitiesForm_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.footerPanel, 0);
             this.Controls.SetChildIndex(this.label1, 0);
@@ -168,9 +133,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn logoColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn editColumn;
     }
 }

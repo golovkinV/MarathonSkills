@@ -67,6 +67,12 @@
     <Compile Include="AdministratorMenu\AdministratorMenuForm.Designer.cs">
       <DependentUpon>AdministratorMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllRunner\AllRunnerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllRunner\AllRunnerForm.Designer.cs">
+      <DependentUpon>AllRunnerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Authorization\AuthorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\RunnerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CoordinatorService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -200,6 +211,9 @@
     <EmbeddedResource Include="AdministratorMenu\AdministratorMenuForm.resx">
       <DependentUpon>AdministratorMenuForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AllRunner\AllRunnerForm.resx">
+      <DependentUpon>AllRunnerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Authorization\AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,6 +283,18 @@
     <None Include="Connected Services\AdminService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\CoordinatorService\Client.CoordinatorService.Charity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CoordinatorService\Client.CoordinatorService.Country.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CoordinatorService\Client.CoordinatorService.RegistrationStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CoordinatorService\Client.CoordinatorService.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\RunnerService\Client.RunnerService.Charity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -286,6 +312,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\RunnerService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CoordinatorService\SerializationClasses.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CoordinatorService\service.wsdl" />
+    <None Include="Connected Services\CoordinatorService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CoordinatorService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\SponsorService\Client.SponsorService.Runner.datasource">
@@ -348,6 +384,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\AdminService\" />
     <WCFMetadataStorage Include="Connected Services\RunnerService\" />
+    <WCFMetadataStorage Include="Connected Services\CoordinatorService\" />
     <WCFMetadataStorage Include="Connected Services\SponsorService\" />
     <WCFMetadataStorage Include="Connected Services\UserService\" />
   </ItemGroup>
@@ -443,6 +480,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wwsm-rescue-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CoordinatorService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CoordinatorService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CoordinatorService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

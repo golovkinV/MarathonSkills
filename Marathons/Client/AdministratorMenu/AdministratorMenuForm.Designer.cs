@@ -38,7 +38,7 @@
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(800, 53);
+            this.panel1.Size = new System.Drawing.Size(1467, 98);
             // 
             // backButton
             // 
@@ -46,8 +46,8 @@
             // 
             // footerPanel
             // 
-            this.footerPanel.Location = new System.Drawing.Point(0, 421);
-            this.footerPanel.Size = new System.Drawing.Size(800, 29);
+            this.footerPanel.Location = new System.Drawing.Point(0, 777);
+            this.footerPanel.Size = new System.Drawing.Size(1467, 54);
             // 
             // timer
             // 
@@ -55,18 +55,21 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(164, 126);
+            this.button1.Location = new System.Drawing.Point(301, 233);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 65);
+            this.button1.Size = new System.Drawing.Size(376, 120);
             this.button1.TabIndex = 20;
             this.button1.Text = "Users";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(423, 126);
+            this.button2.Location = new System.Drawing.Point(776, 233);
+            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(205, 65);
+            this.button2.Size = new System.Drawing.Size(376, 120);
             this.button2.TabIndex = 21;
             this.button2.Text = "Volunteers";
             this.button2.UseVisualStyleBackColor = true;
@@ -74,9 +77,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(164, 233);
+            this.button3.Location = new System.Drawing.Point(301, 430);
+            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(205, 65);
+            this.button3.Size = new System.Drawing.Size(376, 120);
             this.button3.TabIndex = 22;
             this.button3.Text = "Charities";
             this.button3.UseVisualStyleBackColor = true;
@@ -84,22 +88,24 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(423, 233);
+            this.button4.Location = new System.Drawing.Point(776, 430);
+            this.button4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(205, 65);
+            this.button4.Size = new System.Drawing.Size(376, 120);
             this.button4.TabIndex = 23;
             this.button4.Text = "Inventory";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // AdministratorMenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1467, 831);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(11, 11, 11, 11);
             this.Name = "AdministratorMenuForm";
             this.Text = "AdministratorMenuForm";
             this.Load += new System.EventHandler(this.AdministratorMenuForm_Load);

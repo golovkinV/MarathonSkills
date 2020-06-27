@@ -23,5 +23,12 @@ namespace Client.ManageCharities
             Hide();
             runnerMenuForm.Show();
         }
+
+        private void ManageCharitiesForm_Load(object sender, EventArgs e)
+        {
+            var client = new AdminService.AdminServiceClient();
+            var countries = client.GetAllCharity();
+            dataGridView1.DataSource = countries;
+        }
     }
 }
