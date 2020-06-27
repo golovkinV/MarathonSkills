@@ -228,3 +228,70 @@
 		  roleId - id роли пользователя в системе
 
 		Возвращает: void метод.
+
+### 4. Coordinator Service
+
+#### Описание классов:
+				
+  * класс *Charity*:
+		
+		id - id спонсора;
+			
+		name - название благотворительного события;
+			
+		desc - описание;
+			
+		logo - логотип.
+
+  * класс *User*:
+		
+		email - Email пользователя;
+			
+		password - пароль;
+			
+		firstName - имя;
+			
+		lastName - фамилия;
+			
+		role - объект класса Role;
+			
+		runnerData - объект класса RunnerData.
+
+  * класс *Country*:
+		
+		code - код страны;
+			
+		name - название.
+
+  * класс *RegistrationStatus*:
+		
+		id - id статуса;
+			
+		name - название;
+		
+		registrationId - статус регистрации пользователя 
+
+#### Методы сервиса:
+
+  * ***GetAllRunners()*** - метод для получения всех участников забегов
+
+		Возвращает: List<User>.
+		
+  * ***EditUser(User user)*** - метод для редактирования пользователя
+
+		Параметры: 
+		  user - объект класса User.
+
+		Возвращает: void метод.
+		
+  * ***GetCountries()*** - метод для получения списка стран
+
+		Возвращает: List<Country>.
+		
+  * ***GetRegistrationStatuses()*** - метод для получения списка статусов
+
+		Возвращает: List<RegistrationStatus>.
+
+  * ***GetAllCharity()*** - метод для получения списка благотворительных фондов 
+
+		Возвращает: List<Charity>.
