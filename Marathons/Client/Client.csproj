@@ -73,6 +73,12 @@
     <Compile Include="AllRunner\AllRunnerForm.Designer.cs">
       <DependentUpon>AllRunnerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllUsers\AllUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllUsers\AllUsersForm.Designer.cs">
+      <DependentUpon>AllUsersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Authorization\AuthorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllRunner\AllRunnerForm.resx">
       <DependentUpon>AllRunnerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllUsers\AllUsersForm.resx">
+      <DependentUpon>AllUsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Authorization\AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>

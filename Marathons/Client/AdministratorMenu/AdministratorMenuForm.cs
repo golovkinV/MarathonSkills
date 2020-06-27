@@ -18,6 +18,11 @@ namespace Client.AdministratorMenu
             InitializeComponent();
         }
 
+        public AdministratorMenuForm()
+        {
+            InitializeComponent();
+        }
+
         private void backButton_Click(object sender, EventArgs e)
         {
             Form mainForm = new MainForm.MainForm();
@@ -46,7 +51,9 @@ namespace Client.AdministratorMenu
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            Form volunteerManagementsForm = new AllUsers.AllUsersForm();
+            Hide();
+            volunteerManagementsForm.Show();
         }
     }
 }
