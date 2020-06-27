@@ -138,4 +138,93 @@
 		Параметры: 
 		  runnerId - id участника марафона.
 
-		Возвращает: List<RaceInfo>.			
+		Возвращает: List<RaceInfo>.
+
+### 3. Admin Service
+
+#### Описание классов:
+				
+  * класс *Charity*:
+		
+		id - id спонсора;
+			
+		name - название благотворительного события;
+			
+		desc - описание;
+			
+		logo - логотип.
+
+  * класс *Volunteer*:
+  
+  		firstName - имя;
+			
+		lastName - фамилия;
+			
+		countryCode - код страны;
+			
+		gender - пол.
+
+  * класс *User*:
+		
+		email - Email пользователя;
+			
+		password - пароль;
+			
+		firstName - имя;
+			
+		lastName - фамилия;
+			
+		role - объект класса Role;
+			
+		runnerData - объект класса RunnerData.
+
+#### Методы сервиса:
+
+  * ***GetAllCharity()*** - метод для получения списка благотворительных фондов 
+
+		Возвращает: List<Charity>.
+		
+  * ***EditCharity(Charity charity)*** - метод для редактирования благотворительного фонда 
+
+		Параметры: 
+		  charity - объект класса Charity.
+
+		Возвращает: void метод.
+		
+  * ***AddCharity(string name, string desc, string logo)*** - метод для добавления благотворительного фонда 
+
+		Параметры: 
+		  name - название;
+		  desc - описание;
+		  logo - логотип;
+
+		Возвращает: void метод.
+
+  * ***AddVolunteers(List<Volunteer> volunteers)*** - метод для импорта списка волонтеров
+
+		Параметры: 
+		  volunteers - список волонтеров;
+
+		Возвращает: void метод.
+		
+  * ***GetAllUser()*** - метод для получения всех пользователей
+
+		Возвращает: List<User>.
+
+  * ***EditUser(User user)*** - метод для редактирования пользователя
+
+		Параметры: 
+		  user - объект класса User.
+
+		Возвращает: void метод.
+
+  * ***AddUser(string email, string password, string firstName, string lastName, string roleId)*** - метод для добавления пользователя
+
+		Параметры: 
+		  email - Email пользователя;
+		  password - пароль пользователя;
+		  firstName - имя;
+		  lastName - фамилия;
+		  roleId - id роли пользователя в системе
+
+		Возвращает: void метод.
