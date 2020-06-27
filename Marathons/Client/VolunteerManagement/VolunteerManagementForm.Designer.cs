@@ -51,10 +51,12 @@
             // 
             this.backButton.Location = new System.Drawing.Point(18, 21);
             this.backButton.Size = new System.Drawing.Size(88, 28);
+            this.backButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // headerLabel
             // 
             this.headerLabel.Location = new System.Drawing.Point(120, 17);
+            this.headerLabel.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             // 
             // footerPanel
             // 
@@ -82,7 +84,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.label1.Location = new System.Drawing.Point(220, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 27);
+            this.label1.Size = new System.Drawing.Size(345, 38);
             this.label1.TabIndex = 20;
             this.label1.Text = "Volunteer management";
             // 
@@ -93,7 +95,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.label2.Location = new System.Drawing.Point(69, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 23);
+            this.label2.Size = new System.Drawing.Size(180, 32);
             this.label2.TabIndex = 21;
             this.label2.Text = "Sort and filter";
             // 
@@ -104,7 +106,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.label3.Location = new System.Drawing.Point(493, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 23);
+            this.label3.Size = new System.Drawing.Size(95, 32);
             this.label3.TabIndex = 22;
             this.label3.Text = "Import";
             // 
@@ -114,7 +116,7 @@
             this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(45, 163);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 19);
+            this.label4.Size = new System.Drawing.Size(96, 27);
             this.label4.TabIndex = 23;
             this.label4.Text = "Sort by:";
             // 
@@ -125,7 +127,7 @@
             this.sortByСomboBox.FormattingEnabled = true;
             this.sortByСomboBox.Location = new System.Drawing.Point(118, 162);
             this.sortByСomboBox.Name = "sortByСomboBox";
-            this.sortByСomboBox.Size = new System.Drawing.Size(122, 27);
+            this.sortByСomboBox.Size = new System.Drawing.Size(122, 35);
             this.sortByСomboBox.TabIndex = 24;
             this.sortByСomboBox.Text = "Last Name";
             // 
@@ -155,7 +157,7 @@
             this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(259, 245);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 18);
+            this.label5.Size = new System.Drawing.Size(179, 24);
             this.label5.TabIndex = 27;
             this.label5.Text = "Total volunteers:";
             // 
@@ -165,7 +167,7 @@
             this.totalVolunteersLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.totalVolunteersLabel.Location = new System.Drawing.Point(393, 247);
             this.totalVolunteersLabel.Name = "totalVolunteersLabel";
-            this.totalVolunteersLabel.Size = new System.Drawing.Size(16, 17);
+            this.totalVolunteersLabel.Size = new System.Drawing.Size(22, 24);
             this.totalVolunteersLabel.TabIndex = 28;
             this.totalVolunteersLabel.Text = "0";
             // 
@@ -181,7 +183,7 @@
             // 
             // VolunteerManagementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 450);
             this.Controls.Add(this.dataGridView1);

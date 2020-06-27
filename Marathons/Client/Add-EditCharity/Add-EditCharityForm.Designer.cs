@@ -55,10 +55,12 @@
             // 
             this.backButton.Location = new System.Drawing.Point(18, 21);
             this.backButton.Size = new System.Drawing.Size(88, 28);
+            this.backButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // headerLabel
             // 
             this.headerLabel.Location = new System.Drawing.Point(120, 17);
+            this.headerLabel.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             // 
             // footerPanel
             // 
@@ -86,7 +88,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.label1.Location = new System.Drawing.Point(301, 83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 27);
+            this.label1.Size = new System.Drawing.Size(238, 38);
             this.label1.TabIndex = 20;
             this.label1.Text = "Add/edit charity";
             // 
@@ -97,7 +99,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(77, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 19);
+            this.label2.Size = new System.Drawing.Size(82, 27);
             this.label2.TabIndex = 21;
             this.label2.Text = "Name:";
             // 
@@ -107,7 +109,7 @@
             this.nameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.nameTextBox.Location = new System.Drawing.Point(81, 157);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(121, 27);
+            this.nameTextBox.Size = new System.Drawing.Size(121, 35);
             this.nameTextBox.TabIndex = 22;
             this.nameTextBox.Text = "Charity Name";
             // 
@@ -118,7 +120,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label3.Location = new System.Drawing.Point(77, 200);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 19);
+            this.label3.Size = new System.Drawing.Size(132, 27);
             this.label3.TabIndex = 23;
             this.label3.Text = "Description";
             // 
@@ -146,7 +148,7 @@
             this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(522, 245);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 19);
+            this.label4.Size = new System.Drawing.Size(153, 27);
             this.label4.TabIndex = 27;
             this.label4.Text = "Current logo:";
             // 
@@ -156,7 +158,7 @@
             this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(521, 174);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 19);
+            this.label5.Size = new System.Drawing.Size(110, 27);
             this.label5.TabIndex = 28;
             this.label5.Text = "Logo file:";
             // 
@@ -167,7 +169,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.label6.Location = new System.Drawing.Point(522, 135);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(243, 34);
+            this.label6.Size = new System.Drawing.Size(361, 48);
             this.label6.TabIndex = 29;
             this.label6.Text = "Leave the \"logo file\" field blank if you\r\n     do not want to change the logo.";
             // 
@@ -191,7 +193,7 @@
             this.logoNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.logoNameTextBox.Location = new System.Drawing.Point(526, 203);
             this.logoNameTextBox.Name = "logoNameTextBox";
-            this.logoNameTextBox.Size = new System.Drawing.Size(148, 27);
+            this.logoNameTextBox.Size = new System.Drawing.Size(148, 35);
             this.logoNameTextBox.TabIndex = 31;
             this.logoNameTextBox.Text = "charity_logo.jpg";
             // 
@@ -217,7 +219,7 @@
             // 
             // Add_EditCharityForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cancelButton);

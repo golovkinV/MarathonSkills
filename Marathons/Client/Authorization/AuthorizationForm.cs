@@ -41,6 +41,9 @@ namespace Client
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
+            Form runnerMenuForm = new MainForm.MainForm();
+            Hide();
+            runnerMenuForm.Show();
         }
 
         private void ShowNotification(string text)

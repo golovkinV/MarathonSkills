@@ -48,10 +48,12 @@
             // 
             this.backButton.Location = new System.Drawing.Point(18, 21);
             this.backButton.Size = new System.Drawing.Size(88, 28);
+            this.backButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // headerLabel
             // 
             this.headerLabel.Location = new System.Drawing.Point(120, 17);
+            this.headerLabel.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             // 
             // footerPanel
             // 
@@ -79,7 +81,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
             this.label1.Location = new System.Drawing.Point(291, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 27);
+            this.label1.Size = new System.Drawing.Size(260, 38);
             this.label1.TabIndex = 20;
             this.label1.Text = "Manage charities";
             // 
@@ -113,6 +115,7 @@
             this.logoColumn.HeaderText = "Logo";
             this.logoColumn.MinimumWidth = 6;
             this.logoColumn.Name = "logoColumn";
+            this.logoColumn.Width = 175;
             // 
             // nameColumn
             // 
@@ -137,7 +140,7 @@
             // 
             // ManageCharitiesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);

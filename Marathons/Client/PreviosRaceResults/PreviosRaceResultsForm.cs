@@ -17,6 +17,11 @@ namespace Client.PreviosRaceResults
             InitializeComponent();
         }
 
-
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            Form runnerMenuForm = new MainForm.MainForm();
+            Hide();
+            runnerMenuForm.Show();
+        }
     }
 }

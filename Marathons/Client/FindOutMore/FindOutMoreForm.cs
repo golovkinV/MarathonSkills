@@ -16,5 +16,19 @@ namespace Client.FindOutMore
         {
             InitializeComponent();
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            Form runnerMenuForm = new MainForm.MainForm();
+            Hide();
+            runnerMenuForm.Show();
+        }
+
+        private void PreviosRaceResultsButton_Click(object sender, EventArgs e)
+        {
+            Form runnerMenuForm = new PreviosRaceResults.PreviosRaceResultsForm();
+            Hide();
+            runnerMenuForm.Show();
+        }
     }
 }

@@ -41,12 +41,16 @@
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(800, 65);
+            this.panel1.Size = new System.Drawing.Size(1100, 98);
+            // 
+            // backButton
+            // 
+            this.backButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // footerPanel
             // 
-            this.footerPanel.Location = new System.Drawing.Point(0, 414);
-            this.footerPanel.Size = new System.Drawing.Size(800, 36);
+            this.footerPanel.Location = new System.Drawing.Point(0, 621);
+            this.footerPanel.Size = new System.Drawing.Size(1100, 54);
             // 
             // timer
             // 
@@ -54,9 +58,10 @@
             // 
             // marathonSkills2015Button
             // 
-            this.marathonSkills2015Button.Location = new System.Drawing.Point(109, 142);
+            this.marathonSkills2015Button.Location = new System.Drawing.Point(150, 213);
+            this.marathonSkills2015Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.marathonSkills2015Button.Name = "marathonSkills2015Button";
-            this.marathonSkills2015Button.Size = new System.Drawing.Size(183, 73);
+            this.marathonSkills2015Button.Size = new System.Drawing.Size(252, 110);
             this.marathonSkills2015Button.TabIndex = 20;
             this.marathonSkills2015Button.Text = "Marathons Skills 2015";
             this.marathonSkills2015Button.UseVisualStyleBackColor = true;
@@ -64,19 +69,22 @@
             // previosRaceResultsButton
             // 
             this.previosRaceResultsButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.previosRaceResultsButton.Location = new System.Drawing.Point(109, 230);
+            this.previosRaceResultsButton.Location = new System.Drawing.Point(150, 345);
+            this.previosRaceResultsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.previosRaceResultsButton.Name = "previosRaceResultsButton";
-            this.previosRaceResultsButton.Size = new System.Drawing.Size(183, 73);
+            this.previosRaceResultsButton.Size = new System.Drawing.Size(252, 110);
             this.previosRaceResultsButton.TabIndex = 21;
             this.previosRaceResultsButton.Text = "Previos Race Results";
             this.previosRaceResultsButton.UseVisualStyleBackColor = true;
+            this.previosRaceResultsButton.Click += new System.EventHandler(this.PreviosRaceResultsButton_Click);
             // 
             // bmiCalculatorButton
             // 
             this.bmiCalculatorButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bmiCalculatorButton.Location = new System.Drawing.Point(109, 326);
+            this.bmiCalculatorButton.Location = new System.Drawing.Point(150, 489);
+            this.bmiCalculatorButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bmiCalculatorButton.Name = "bmiCalculatorButton";
-            this.bmiCalculatorButton.Size = new System.Drawing.Size(183, 73);
+            this.bmiCalculatorButton.Size = new System.Drawing.Size(252, 110);
             this.bmiCalculatorButton.TabIndex = 22;
             this.bmiCalculatorButton.Text = "BMI calculator";
             this.bmiCalculatorButton.UseVisualStyleBackColor = true;
@@ -84,9 +92,10 @@
             // bmrCalculatorButton
             // 
             this.bmrCalculatorButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bmrCalculatorButton.Location = new System.Drawing.Point(411, 326);
+            this.bmrCalculatorButton.Location = new System.Drawing.Point(565, 489);
+            this.bmrCalculatorButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bmrCalculatorButton.Name = "bmrCalculatorButton";
-            this.bmrCalculatorButton.Size = new System.Drawing.Size(183, 73);
+            this.bmrCalculatorButton.Size = new System.Drawing.Size(252, 110);
             this.bmrCalculatorButton.TabIndex = 25;
             this.bmrCalculatorButton.Text = "BMR calculator";
             this.bmrCalculatorButton.UseVisualStyleBackColor = true;
@@ -94,9 +103,10 @@
             // listOfCharitiesButton
             // 
             this.listOfCharitiesButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listOfCharitiesButton.Location = new System.Drawing.Point(411, 230);
+            this.listOfCharitiesButton.Location = new System.Drawing.Point(565, 345);
+            this.listOfCharitiesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listOfCharitiesButton.Name = "listOfCharitiesButton";
-            this.listOfCharitiesButton.Size = new System.Drawing.Size(183, 73);
+            this.listOfCharitiesButton.Size = new System.Drawing.Size(252, 110);
             this.listOfCharitiesButton.TabIndex = 24;
             this.listOfCharitiesButton.Text = "List of charities";
             this.listOfCharitiesButton.UseVisualStyleBackColor = true;
@@ -104,9 +114,10 @@
             // howLongIsAMarathonButton
             // 
             this.howLongIsAMarathonButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.howLongIsAMarathonButton.Location = new System.Drawing.Point(411, 142);
+            this.howLongIsAMarathonButton.Location = new System.Drawing.Point(565, 213);
+            this.howLongIsAMarathonButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.howLongIsAMarathonButton.Name = "howLongIsAMarathonButton";
-            this.howLongIsAMarathonButton.Size = new System.Drawing.Size(183, 73);
+            this.howLongIsAMarathonButton.Size = new System.Drawing.Size(252, 110);
             this.howLongIsAMarathonButton.TabIndex = 23;
             this.howLongIsAMarathonButton.Text = "How long is a marathon?";
             this.howLongIsAMarathonButton.UseVisualStyleBackColor = true;
@@ -115,17 +126,18 @@
             // 
             this.findOutMoreInformationLabel.AutoSize = true;
             this.findOutMoreInformationLabel.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.findOutMoreInformationLabel.Location = new System.Drawing.Point(234, 91);
+            this.findOutMoreInformationLabel.Location = new System.Drawing.Point(322, 136);
+            this.findOutMoreInformationLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.findOutMoreInformationLabel.Name = "findOutMoreInformationLabel";
-            this.findOutMoreInformationLabel.Size = new System.Drawing.Size(288, 27);
+            this.findOutMoreInformationLabel.Size = new System.Drawing.Size(381, 38);
             this.findOutMoreInformationLabel.TabIndex = 26;
             this.findOutMoreInformationLabel.Text = "Find out more information";
             // 
             // FindOutMoreForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1100, 675);
             this.Controls.Add(this.findOutMoreInformationLabel);
             this.Controls.Add(this.bmrCalculatorButton);
             this.Controls.Add(this.listOfCharitiesButton);
@@ -133,6 +145,7 @@
             this.Controls.Add(this.bmiCalculatorButton);
             this.Controls.Add(this.previosRaceResultsButton);
             this.Controls.Add(this.marathonSkills2015Button);
+            this.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.Name = "FindOutMoreForm";
             this.Text = "FindOutMoreForm";
             this.Controls.SetChildIndex(this.marathonSkills2015Button, 0);
