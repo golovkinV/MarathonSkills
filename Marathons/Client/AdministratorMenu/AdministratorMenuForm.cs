@@ -43,5 +43,10 @@ namespace Client.AdministratorMenu
             Hide();
             volunteerManagementsForm.Show();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

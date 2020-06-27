@@ -23,5 +23,10 @@ namespace Client.VolunteerManagement
             Hide();
             runnerMenuForm.Show();
         }
+
+        private void VolunteerManagementForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

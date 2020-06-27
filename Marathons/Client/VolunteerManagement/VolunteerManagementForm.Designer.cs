@@ -199,6 +199,7 @@
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "VolunteerManagementForm";
             this.Text = "Marathon Skills 2015 - Volunteer Management";
+            this.Load += new System.EventHandler(this.VolunteerManagementForm_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.footerPanel, 0);
             this.Controls.SetChildIndex(this.label1, 0);
